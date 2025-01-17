@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GraphQL Mock API",
+    "version": "1.0.0",
+    "description": "GraphQL API with conditional logic and mock data"
+  },
+  "paths": {
+    "/graphql": {
+      "post": {
+        "summary": "GraphQL Endpoint",
+        "description": "Execute GraphQL queries and mutations",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "example": "query getUser($role: String!) { getUser(role: $role) { id name email role } }"
+                  },
+                  "variables": {
+                    "type": "object",
+                    "example": { "role": "admin" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful GraphQL Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

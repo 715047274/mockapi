@@ -1,0 +1,11 @@
+query timeDataSources(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+) {
+    timeDataSources(
+        ctx: $ctx
+        payRunId: $payRunId
+    ) {
+        value
+    }
+}

@@ -1,0 +1,10 @@
+query employeePayrollTaxSubBundle(
+    $ctx: ServiceContextInput!
+    $employeeId: Int!
+) {
+    employeePayrollTaxSubBundle(ctx: $ctx, employeeId: $employeeId) {
+        employeeId
+        taxIds
+        allTaxIds
+    }
+}

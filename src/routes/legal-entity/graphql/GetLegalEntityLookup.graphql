@@ -1,0 +1,6 @@
+query legalEntitiesByPayRun($ctx: ServiceContextInput!, $payRunId: Long!) {
+    legalEntitiesByPayRun(ctx: $ctx, payRunId: $payRunId) {
+      legalEntityId
+      shortName
+    }
+}

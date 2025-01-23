@@ -1,0 +1,11 @@
+query glExportDefinitions(
+    $ctx: ServiceContextInput
+    $payGroupId: Int!
+  ) {
+    glExportDefinitions(
+    ctx: $ctx
+    payGroupId: $payGroupId) {
+        dataExportDefinitionId
+        shortName
+    }
+  }

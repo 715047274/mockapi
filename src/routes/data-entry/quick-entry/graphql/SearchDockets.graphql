@@ -1,0 +1,19 @@
+query searchDockets(
+  $ctx: ServiceContextInput!
+  $term: String
+  $maxResults: Int
+  $moreResultText: String
+) {
+  searchDockets(
+    ctx: $ctx
+    term: $term
+    maxResults: $maxResults
+    moreResultText: $moreResultText
+  ) {
+      dockets {
+        docketId
+        shortName
+      }
+      totalCount
+  }
+}

@@ -1,0 +1,21 @@
+query dataEntriesSummary(
+  $ctx: ServiceContextInput!
+  $filters: [FilterModelInput]
+) {
+  dataEntriesSummary(
+    ctx: $ctx
+    filters: $filters
+  ) {
+    totalCount
+    entriesSummary {
+        entryType
+        entryCount
+        totalDeductionsAmount
+        totalDeductionsDifference
+        totalTaxesAmount
+        totalTaxesDifference
+        totalEarningsAmount
+        totalEarningsDifference
+    }
+  }
+}

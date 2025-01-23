@@ -1,0 +1,13 @@
+query activeThirdPartySickPayProviders(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+) {
+    activeThirdPartySickPayProviders(ctx: $ctx, payRunId: $payRunId) {
+        id
+        shortName
+        xrefCode
+        employerTaxLiabilitiesRemittedByCeridian
+        employeeTaxLiabilitiesRemittedByCeridian
+        w2PreparedByCeridian
+    }
+}

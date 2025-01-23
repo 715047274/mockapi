@@ -1,0 +1,22 @@
+query previewSummary(
+  $payRunId: Long!
+  $toComparePayRunId: Long
+  $legalEntityIds: [Int!]
+) {
+  previewSummary(
+    payRunId: $payRunId
+    toComparePayRunId: $toComparePayRunId
+    legalEntityIds: $legalEntityIds
+  ) {
+      itemType
+      amount
+      toCompareAmount
+      varianceAmount
+      hours
+      toCompareHours
+      varianceHours
+      employeeCount
+      toCompareEmployeeCount
+      varianceEmployeeCount
+  }
+}

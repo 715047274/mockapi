@@ -1,0 +1,11 @@
+query timeDataImportIdentifier(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+) {
+    timeDataImportIdentifiers(
+        ctx: $ctx
+        payRunId: $payRunId
+    ) {
+        value
+    }
+}

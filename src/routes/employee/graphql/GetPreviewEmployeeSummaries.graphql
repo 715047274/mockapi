@@ -1,0 +1,27 @@
+query previewEmployeeSummaries(
+    $payRunId: Long!
+    $toComparePayRunId: Long
+    $employeeIds: [Int!]!
+    $legalEntityIds: [Int!]
+    $codes: [CodeBaseInfoModelInput!]
+    $includeNetPay: Boolean
+) {
+    previewEmployeeSummaries(
+        employeeIds: $employeeIds
+        payRunId: $payRunId
+        toComparePayRunId: $toComparePayRunId
+        legalEntityIds: $legalEntityIds
+        codes: $codes
+        includeNetPay: $includeNetPay
+    ) {
+        employeeId
+        payRunId
+        items {
+            itemType
+            amount
+            toCompareAmount
+            variance
+            percentVariance
+        }
+    }
+}

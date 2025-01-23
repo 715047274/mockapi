@@ -1,0 +1,9 @@
+mutation modifyLayout($id: String!, $layout: String!) {
+    modifyLayout(id: $id, layout: $layout) {
+        id
+        category
+        breakpoint
+        user
+        layout
+    }
+}

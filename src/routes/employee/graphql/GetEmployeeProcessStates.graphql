@@ -1,0 +1,19 @@
+query payRunEmployeeProcessStates(
+  $ctx: ServiceContextInput!
+  $payRunId: Long!
+  $employeeIds: [Int!]
+) {
+  payRunEmployeeProcessStates(
+    ctx: $ctx
+    payRunId: $payRunId
+    employeeIds: $employeeIds
+  ) {
+    payRunId
+    statuses {
+      employeeId
+      processStateCode
+      lastCalculated: lastModifiedTimestamp
+      errorCount
+    }
+  }
+}

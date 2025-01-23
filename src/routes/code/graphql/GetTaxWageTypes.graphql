@@ -1,0 +1,14 @@
+query taxWageTypes(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+    $payrollTaxId: Int
+) {
+    taxWageTypes(ctx: $ctx, payRunId: $payRunId, payrollTaxId: $payrollTaxId) {
+        taxAuthorityInstanceId
+        taxWageTypeId
+        taxWageTypeCode
+        taxWageTypeDescription
+        effectiveStart
+        effectiveEnd
+    }
+}

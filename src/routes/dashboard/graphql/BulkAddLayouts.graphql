@@ -1,0 +1,9 @@
+mutation bulkAddUserLayouts($layouts: [CreateLayoutInput!]!) {
+    bulkAddUserLayouts(layouts: $layouts) {
+        id
+        category
+        breakpoint
+        user
+        layout
+    }
+}

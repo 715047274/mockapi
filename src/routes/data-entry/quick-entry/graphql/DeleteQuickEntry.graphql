@@ -1,0 +1,13 @@
+mutation deleteQuickEntry($quickEntries: [DeleteQuickEntryInput!]!) {
+    deleteQuickEntry(quickEntries: $quickEntries) {
+        savingSuccessful
+        errorMessage
+        totalSaved
+        totalFailed
+        batchData {
+            payEntryBatchDataId
+            payEntryBatchDataStageId
+            success
+        }
+    }
+}

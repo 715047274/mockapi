@@ -1,0 +1,9 @@
+query previewProcessStatus($payRunId1: Long!, $payRunId2: Long, $allowRequestGenerate: Boolean!) {
+  previewProcessStatus(
+    payRunId1: $payRunId1
+    payRunId2: $payRunId2
+    allowRequestGenerate: $allowRequestGenerate
+  ) {
+    previewStatus
+  }
+}

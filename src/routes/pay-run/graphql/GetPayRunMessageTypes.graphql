@@ -1,0 +1,7 @@
+query payRunMessageTypes($ctx: ServiceContextInput!, $payRunId: Long, $returnDistinctShortName: Boolean) {
+    payRunMessageTypes(ctx: $ctx, payRunId: $payRunId, returnDistinctShortName: $returnDistinctShortName) {
+        messageTypeId
+        shortName
+        longName
+    }
+}

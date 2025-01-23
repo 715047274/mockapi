@@ -1,0 +1,5 @@
+query lastCommittedPayRun($payGroupId:Int!, $ctx: ServiceContextInput!) {
+    lastCommittedPayRun(payGroupId: $payGroupId, ctx: $ctx){
+        payDate
+    }
+}

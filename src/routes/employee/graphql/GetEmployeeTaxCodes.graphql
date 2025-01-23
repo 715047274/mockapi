@@ -1,0 +1,21 @@
+query taxCodesForEmployee($ctx: ServiceContextInput!, $employeeId: Int!) {
+    taxCodesForEmployee(ctx: $ctx, employeeId: $employeeId) {
+        uniqueId
+        codeId
+        codeTypeId
+        shortName
+        isEmployerTax
+        effectiveStart
+        effectiveEnd
+        notSupportedTaxInstanceItems {
+            prTaxAuthorityInstanceId
+            effectiveStart
+            effectiveEnd
+        }
+        payrollTaxLegalEntityIds
+        isTaxUnSupported
+        countryCode
+        taxCategoryId
+        taxAuthorityInstanceId
+    }
+}

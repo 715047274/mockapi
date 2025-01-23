@@ -1,0 +1,31 @@
+query quickEntries(
+  $ctx: ServiceContextInput!
+  $filters: [FilterModelInput]
+  $pagingParams: PagingParameterInput
+  $sortingParams: [SortingParameterInput]
+) {
+  quickEntries(
+    ctx: $ctx
+    filters: $filters
+    pagingParams: $pagingParams
+    sortingParams: $sortingParams
+  ) {
+    items {
+      payEntryBatchDataId
+      payRunId
+      employeeId
+      employeeName
+      employeeNumber
+      codeTypeId
+      codeType
+      codeName
+      hours
+      rate
+      amount
+      percent
+      savedBy
+      lastUpdated
+      lastUpdatedTime
+    }
+  }
+}

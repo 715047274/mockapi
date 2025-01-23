@@ -1,0 +1,5 @@
+mutation requestGLCalculate($payRunIds: [Long!]!, $exportDefinitionIds: [Int!]!) {
+    requestGLCalculate(payRunIds: $payRunIds, exportDefinitionIds: $exportDefinitionIds) {
+        success
+    }
+}

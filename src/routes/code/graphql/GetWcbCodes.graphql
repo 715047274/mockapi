@@ -1,0 +1,11 @@
+query wcbCodes($ctx: ServiceContextInput!) {
+    wcbCodes(ctx: $ctx) {
+        wcbCodeId
+        geoStateId
+        countryCode
+        xrefCode
+		shortName
+        stateCode
+		wcbCodeCode
+    }
+}

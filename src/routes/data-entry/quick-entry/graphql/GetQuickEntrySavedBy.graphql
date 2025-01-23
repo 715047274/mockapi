@@ -1,0 +1,6 @@
+query quickEntriesSavedBy($ctx: ServiceContextInput!, $payRunId: Long!) {
+    quickEntriesSavedBy(ctx: $ctx, payRunId: $payRunId) {
+        savedByUserId
+        savedByUserName
+    }
+}

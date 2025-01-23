@@ -1,0 +1,13 @@
+mutation calculatePayRun($payRunId: Long!, $isForceRecalc: Boolean!) {
+    calculatePayRun(payRunId: $payRunId, isForceRecalc: $isForceRecalc) {
+        payRunId
+        success
+        message {
+            messageKey
+            messageTitle
+            messageText
+            messageLevel
+            messageParams
+        }
+    }
+}

@@ -1,0 +1,13 @@
+mutation calculatePayRuns($payRunIds: [Long!]!) {
+    calculatePayRuns(payRunIds: $payRunIds) {
+        payRunIds
+        success
+        message {
+            messageKey
+            messageTitle
+            messageText
+            messageLevel
+            messageParams
+        }
+    }
+}

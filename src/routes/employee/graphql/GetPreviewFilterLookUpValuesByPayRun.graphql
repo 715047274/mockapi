@@ -1,0 +1,15 @@
+query previewFilterLookUpValuesByPayRun(
+    $payRunId: Long!
+    $toComparePayRunId: Long
+) {
+    previewFilterLookUpValuesByPayRun(
+        payRunId: $payRunId
+        toComparePayRunId: $toComparePayRunId
+    ) {
+      legalEntityIds
+      codes{
+        codeId
+        codeTypeId
+      }
+    }
+}

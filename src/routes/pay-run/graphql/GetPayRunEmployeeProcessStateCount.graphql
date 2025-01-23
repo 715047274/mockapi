@@ -1,0 +1,30 @@
+query payRunEmployeeProcessStateCount($ctx: ServiceContextInput!, $payRunIds: [Long!], $withCommittingCount: Boolean) {
+    payRunEmployeeProcessStateCount(ctx: $ctx, payRunIds: $payRunIds, withCommittingCount: $withCommittingCount) {
+        payRunId
+        totalEmployees
+        blockedCount {
+            count
+            percent
+        }
+        committedCount {
+            count
+            percent
+        }
+        committingCount {
+            count
+            percent
+        }
+        calculatingCount {
+            count
+            percent
+        }
+        calculatedCount {
+            count
+            percent
+        }
+        notStartedCount {
+            count
+            percent
+        }
+    }
+}

@@ -1,0 +1,37 @@
+mutation createQuickEntry(
+    $quickEntries: [CreateQuickEntryInput!]!
+    $validateOnly: Boolean!
+) {
+    createQuickEntry(quickEntries: $quickEntries, validateOnly: $validateOnly) {
+        clientEntityId
+        savingSuccessful
+        errorMessage
+        validationSuccessful
+        validationMessages {
+            payEntryBatchDataId
+            payEntryBatchDataStageId
+            clientEntityId
+            messageLabel
+            messageParams
+            messageFields
+            messageLevel
+        }
+        batchData {
+            payEntryBatchDataId
+            payEntryBatchDataStageId
+            payRunId
+            employeeId
+            employeeName
+            employeeNumber
+            codeType
+            codeName
+            hours
+            rate
+            amount
+            percent
+            savedBy
+            lastUpdated
+            lastUpdatedTime
+        }
+    }
+}

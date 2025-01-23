@@ -1,0 +1,5 @@
+mutation requestPayrollDataExport($payRunId: Long!, $forceGenerate: Boolean!, $exportConfigIds: [Int!]) {
+    requestPayrollDataExport(payRunId: $payRunId, forceGenerate: $forceGenerate, exportConfigIds: $exportConfigIds) {
+        success
+    }
+}

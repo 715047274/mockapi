@@ -1,0 +1,14 @@
+mutation commitPayRun($payRunId: Long!) {
+    commitPayRun(payRunId: $payRunId) {
+        payRunId
+        success
+        enableHyperscaleCommit
+        message {
+            messageKey
+            messageTitle
+            messageText
+            messageLevel
+            messageParams
+        }
+    }
+}

@@ -1,0 +1,8 @@
+mutation saveUserPreference($userPreference: SaveUserPreferenceInput!) 
+{  
+	saveUserPreference(userPreference:$userPreference) {    
+        userPreferenceId    
+		success
+		messages
+	}
+}

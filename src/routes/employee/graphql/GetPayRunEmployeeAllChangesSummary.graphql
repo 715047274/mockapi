@@ -1,0 +1,37 @@
+query allEmployeeChangesSummary(
+    $payRunId: Long!
+    $toComparePayRunId: Long
+) {
+    allEmployeeChangesSummary(
+        payRunId: $payRunId
+        toComparePayRunId: $toComparePayRunId
+    ) {
+        differencePercentageTerminated
+        differencePercentageHired
+        differencePercentageReactivated
+        termedEmployeesCount
+        hiredEmployeesCount
+        reactivatedEmployeesCount
+        termedEmployees {
+            employeeId
+            employeeName
+            employeeNumber
+            amount
+            effectiveTime
+        }
+        hiredEmployees {
+            employeeId
+            employeeName
+            employeeNumber
+            amount
+            effectiveTime
+        }
+        reactivatedEmployees {
+            employeeId
+            employeeName
+            employeeNumber
+            amount
+            effectiveTime
+        }
+    }
+}

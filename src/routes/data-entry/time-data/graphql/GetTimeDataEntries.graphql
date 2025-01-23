@@ -1,0 +1,33 @@
+query timeData(
+    $ctx: ServiceContextInput!
+    $filters: [FilterModelInput]
+    $pagingParams: PagingParameterInput
+    $sortingParams: [SortingParameterInput]
+) {
+    timeData(
+        ctx: $ctx
+        filters: $filters
+        pagingParams: $pagingParams
+        sortingParams: $sortingParams
+    ) {
+        totalCount
+        items {
+            employeeId
+            employeeName
+            employeeNumber
+            codeId
+            codeName
+            codeType
+            businessDate
+            isRetro
+            amount
+            rate
+            hours
+            pieceQuantity
+            savedBy
+            lastUpdated
+            lastUpdatedTime
+            comment
+        }
+    }
+}

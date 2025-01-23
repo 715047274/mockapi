@@ -1,0 +1,23 @@
+query getEntryImportMetadata(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+    $startTime: DateTime
+    $endTime: DateTime
+) {
+    entryImportMetadata(
+        ctx: $ctx,
+        payRunId: $payRunId,
+        fromTime: $startTime,
+        toTime: $endTime
+    ) {
+        importId,
+        importSetName,
+        importFileName,
+        importType,
+        queuedTimestamp,
+        jobStatus,
+        successfulEntries,
+        erroredEntries,
+        errorOccurActionId
+    }
+}

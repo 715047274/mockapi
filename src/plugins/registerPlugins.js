@@ -7,5 +7,6 @@ export async function registerPlugins(fastify){
         schema,
         resolvers,
         graphiql: true, // Enables the GraphiQL UI for testing GraphQL queries
+        prefix:'/payroll'
     });
 }

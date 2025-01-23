@@ -1,0 +1,10 @@
+query earningAmountTypes($ctx: ServiceContextInput, $earningId: Int) {
+    earningAmountTypes(ctx: $ctx, earningId: $earningId) {
+        earningAmountTypeId
+        codeName
+        amount
+        effectiveStart
+        effectiveEnd
+        earningId
+    }
+}

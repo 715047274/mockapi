@@ -1,0 +1,8 @@
+query quickEntryLaborMetrics(
+    $ctx: ServiceContextInput!
+    $payEntryBatchDataId: Long!
+) {
+    quickEntryLaborMetrics(ctx: $ctx, payEntryBatchDataId: $payEntryBatchDataId) {
+        codeId
+    }
+}

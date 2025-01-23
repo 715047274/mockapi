@@ -1,0 +1,13 @@
+mutation validatePayRun($payRunId: Long!) {
+    validatePayRun(payRunId: $payRunId) {
+        payRunId
+        success
+        message {
+            messageKey
+            messageTitle
+            messageText
+            messageLevel
+            messageParams
+        }
+    }
+}

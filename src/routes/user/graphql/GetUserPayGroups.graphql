@@ -1,0 +1,8 @@
+query userPayGroups($ctx: ServiceContextInput!) {
+  userPayGroups(
+    ctx: $ctx
+  ) {
+      geoCountryId
+      countryCode
+  }
+}

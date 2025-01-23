@@ -1,0 +1,6 @@
+query distributionCodes($ctx: ServiceContextInput!) {
+    distributionCodes(ctx: $ctx) {
+        shortName
+        codeName
+    }
+}

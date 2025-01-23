@@ -1,0 +1,44 @@
+query previewCodeLevelSummary($payRunId: Long!, $itemType: Int!, $skip: Int!, $take: Int!,
+    $toComparePayRunId: Long, $legalEntityIds: [Int!]) {
+    previewCodeLevelSummary(payRunId: $payRunId
+    itemType: $itemType
+    skip: $skip
+    take: $take
+    toComparePayRunId: $toComparePayRunId
+    legalEntityIds: $legalEntityIds
+    ) {
+        totalCount
+        items {
+            itemType
+            codeType
+            itemId
+            amount
+            toCompareAmount
+            varianceAmount
+            hours
+            toCompareHours
+            varianceHours
+            employeeCount
+            toCompareEmployeeCount
+            varianceEmployeeCount
+            adjustmentAmount
+            varianceAdjustmentAmount
+            toCompareAdjustmentAmount
+            limitedTaxableWages
+            varianceLimitedTaxableWages
+            toCompareLimitedTaxableWages
+            totalTaxableWages
+            varianceTotalTaxableWages
+            toCompareTotalTaxableWages
+            mtdAmount
+            varianceMtdAmount
+            toCompareMtdAmount
+            ytdAmount
+            varianceYtdAmount
+            toCompareYtdAmount
+            qtdAmount
+            varianceQtdAmount
+            toCompareQtdAmount
+        }
+    }
+}

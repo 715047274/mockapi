@@ -1,0 +1,26 @@
+query adjustments(
+    $ctx: ServiceContextInput,
+    $filters: [FilterModelInput]
+    $pagingParams: PagingParameterInput
+    $sortingParams: [SortingParameterInput]
+  ) {
+  adjustments(
+    ctx: $ctx,
+    filters: $filters,
+    pagingParams: $pagingParams,
+    sortingParams: $sortingParams,
+  ) {
+    totalCount
+    items {
+      payEntryAdjustmentBatchId
+      employeeId
+      employeeName
+      employeeNumber
+      lastUpdated
+      savedBy
+      adjustmentTypeName
+      lastUpdatedTime
+      payRunId
+    }
+  }
+}

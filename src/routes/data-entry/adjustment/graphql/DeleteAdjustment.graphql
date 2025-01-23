@@ -1,0 +1,10 @@
+mutation deleteAdjustment($deleteAdjustments: DeleteAdjustmentInput!) {
+    deleteAdjustment(deleteAdjustments: $deleteAdjustments) {
+        success
+        errorMessage
+        failedPayEntryAdjustmentBatchIds
+        deletedAdjustments {
+            payEntryAdjustmentBatchId
+        }
+    }
+}

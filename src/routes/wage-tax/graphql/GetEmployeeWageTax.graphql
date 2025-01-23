@@ -1,0 +1,27 @@
+query employeeWageTax(
+    $ctx: ServiceContextInput!
+    $filters: [FilterModelInput]
+) {
+    employeeWageTax(ctx: $ctx, filters: $filters) {
+        totalCount
+        items {
+            taxName
+            dtsCode
+            workPsdCode
+            residentPsdCode
+            exemption
+            prTaxAuthorityInstanceId
+            amount
+            varianceAmount
+            ltdWage
+            varianceLtdWage
+            totalWage
+            varianceTotalWage
+            otherWage
+            varianceOtherWage
+            payDate
+            legalEntityId
+            legalEntityName
+        }
+    }
+}

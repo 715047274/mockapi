@@ -1,0 +1,9 @@
+query adjustmentsSavedBy($ctx: ServiceContextInput!, $payRunId: Long!) {
+    adjustmentsSavedBy(ctx: $ctx, payRunId: $payRunId) {
+        totalCount
+        items {
+            savedByUserId
+            savedByUserName
+        }
+    }
+}

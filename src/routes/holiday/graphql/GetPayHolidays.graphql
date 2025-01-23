@@ -1,0 +1,13 @@
+query payHolidays($ctx: ServiceContextInput!) {
+    payHolidays(ctx: $ctx) {
+        payHolidayId
+        holidayDate
+        shortName
+        xRefCode
+        isBankHoliday
+        clientId
+        geoCountryId
+        countryCode
+        payHolidayGroupId
+    }
+}

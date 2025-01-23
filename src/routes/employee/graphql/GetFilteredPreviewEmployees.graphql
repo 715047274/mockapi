@@ -1,0 +1,24 @@
+query filteredPreviewEmployees(
+  $payRunId: Long!
+  $filter: PreviewFilterModelInput!
+  $skip: Int!
+  $take: Int!
+  $uniqueId: String
+) {
+  filteredPreviewEmployees(
+    payRunId: $payRunId
+    filter: $filter
+    skip: $skip
+    take: $take
+    uniqueId: $uniqueId
+  ) {
+    items
+    {
+      employeeId,
+      isFromPrevPayRun
+    }
+    totalCount
+    filterUniqueId
+    varianceStatus
+  }
+}

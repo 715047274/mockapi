@@ -1,0 +1,26 @@
+query employeeWorkAssignments(
+    $ctx: ServiceContextInput!
+    $employeeId: Int!
+    $payRunId: Long!
+) {
+    employeeWorkAssignments(
+        ctx: $ctx
+        employeeId: $employeeId
+        payRunId: $payRunId
+    ) {
+        employeeWorkAssignmentId
+        deptJobId
+        jobAssignmentDisplayName
+        orgUnitId
+        orgUnitDisplayName
+        legalEntityId
+        legalEntityName
+        isPrimary
+        isCurrent
+        payRate
+        laborPercentage
+        isPrimaryPerLegalEntity
+        effectiveStart
+        effectiveEnd
+    }
+}

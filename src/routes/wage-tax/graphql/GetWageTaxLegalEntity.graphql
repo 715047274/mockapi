@@ -1,0 +1,56 @@
+query wageTaxLegalEntity(
+    $ctx: ServiceContextInput!
+    $filters: [FilterModelInput]
+    $pagingParams: PagingParameterInput
+    $sortingParams: [SortingParameterInput]
+) {
+    wageTaxLegalEntity(
+        ctx: $ctx
+        filters: $filters
+        pagingParams: $pagingParams
+        sortingParams: $sortingParams
+    ) {
+        totalCount
+        items {
+            employeeId
+            employeeName
+            status
+            payGroup {
+                payGroupId
+                payGroupName
+            }
+            payPeriod
+            payPeriodSuffix
+            stateId
+            stateName
+            exemptionId
+            exemptionName
+            fedWitholding
+            varianceFedWitholding
+            ltdWageWithholding
+            varianceLtdWageWithholding
+            totalWageWithholding
+            varianceTotalWageWithholding
+            fedSocSecEmployer
+            varianceFedSocSecEmployer
+            ltdWageSocSecEmployer
+            varianceLtdWageSocSecEmployer
+            fedSocSecEmployee
+            varianceFedSocSecEmployee
+            ltdWageSocSecEmployee
+            varianceLtdWageSocSecEmployee
+            fedFuta
+            varianceFedFuta
+            futaLtdWage
+            varianceFutaLtdWage
+            fedMedicareEmployer
+            varianceFedMedicareEmployer
+            medicareLtdWageEmployer
+            varianceMedicareLtdWageEmployer
+            fedMedicareEmployee
+            varianceFedMedicareEmployee
+            medicareEELtdWage
+            varianceMedicareEELtdWage
+        }
+    }
+}

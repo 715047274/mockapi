@@ -1,0 +1,13 @@
+mutation inAuditPayRun($payRunId: Long!, $userId: Int!, $isLock: Boolean) {
+    inAuditPayRun(payRunId:$payRunId, userId:$userId, isLock: $isLock) {
+        payRunId
+        success
+        message {
+            messageKey
+            messageTitle
+            messageText
+            messageLevel
+            messageParams
+        }
+	}
+}

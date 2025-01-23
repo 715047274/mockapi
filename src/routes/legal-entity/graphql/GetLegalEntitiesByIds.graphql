@@ -1,0 +1,9 @@
+query legalEntitiesByIds($ctx: ServiceContextInput!, $legalEntityIds: [Int!]) {
+    legalEntitiesByIds (ctx: $ctx
+    legalEntityIds: $legalEntityIds) {
+        legalEntityId
+        longName
+        shortName
+        countryCode
+    }
+}

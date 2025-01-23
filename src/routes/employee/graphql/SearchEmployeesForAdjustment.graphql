@@ -1,0 +1,23 @@
+query searchEmployeesForAdjustment(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+    $term: String!
+    $maxResults: Int
+    $moreResultText: String
+) {
+    searchEmployeesForAdjustment(
+        ctx: $ctx
+        payRunId: $payRunId
+        term: $term
+        maxResults: $maxResults
+        moreResultText: $moreResultText
+    ) {
+        employeeId
+        displayName
+        employeeName
+        employeeNumber
+        displayNameWithFullMiddleName
+        displayNameWithOnlyFirstAndLast
+        employmentType
+    }
+}

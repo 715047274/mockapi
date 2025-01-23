@@ -1,0 +1,7 @@
+query employmentStatus($ctx: ServiceContextInput!) {
+    employmentStatus(ctx: $ctx) {
+      employmentStatusId
+      shortName
+    }
+}
+

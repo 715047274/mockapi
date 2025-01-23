@@ -1,0 +1,17 @@
+query employeeWageTaxLegalEntity(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+    $employeeId: Long!
+) {
+    employeeWageTaxLegalEntity(
+        ctx: $ctx
+        payRunId: $payRunId
+        employeeId: $employeeId
+    ) {
+        totalCount
+        items {
+            legalEntityId
+            legalEntityName
+        }
+    }
+}

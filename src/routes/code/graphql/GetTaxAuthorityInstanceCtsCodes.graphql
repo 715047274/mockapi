@@ -1,0 +1,10 @@
+query taxAuthorityInstanceCtsCodes(
+    $ctx: ServiceContextInput!
+    $payDate: Date!
+) {
+    taxAuthorityInstanceCtsCodes(ctx: $ctx, payDate: $payDate) {
+        taxAuthorityInstanceId
+        ctsCode
+        displayName
+    }
+}

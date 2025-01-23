@@ -1,0 +1,18 @@
+query employeeWageAttachmentCodesByIds(
+    $ctx: ServiceContextInput,
+    $codeIds: [Int!]
+  ) {
+  employeeWageAttachmentCodesByIds(
+    ctx: $ctx,
+    codeIds: $codeIds
+  ) {
+        uniqueId
+        codeId
+        codeTypeId
+        shortName
+        isPayEntryWageAttachment
+        employeeId
+        isActive
+        garnishmentLimitAmount
+  }
+}

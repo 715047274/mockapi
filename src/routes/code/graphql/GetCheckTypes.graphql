@@ -1,0 +1,8 @@
+query checkTypes($ctx: ServiceContextInput!, $includeAllType: Boolean!) {
+    checkTypes(ctx: $ctx, includeAllType: $includeAllType) {
+        payRunCheckTypeId
+        shortName
+        codeName
+        xrefCode
+    }
+}

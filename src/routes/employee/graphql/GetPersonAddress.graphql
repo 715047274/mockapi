@@ -1,0 +1,9 @@
+query personAddress($ctx: ServiceContextInput!, $employeeId: Int) 
+{  
+    personAddress(ctx: $ctx, employeeId: $employeeId) 
+    {
+        longName
+        shortName
+        value
+    }
+}

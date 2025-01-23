@@ -1,0 +1,11 @@
+query employeePriorStateBundle(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+    $employeeId: Int!
+) {
+    employeePriorStateBundle(ctx: $ctx, payRunId: $payRunId, employeeId: $employeeId) {
+        legalEntityId
+        employeeStateCode
+
+    }
+}

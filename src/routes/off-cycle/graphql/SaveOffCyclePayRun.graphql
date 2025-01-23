@@ -1,0 +1,52 @@
+mutation saveOffCyclePayRun($offCyclePayRun: SaveOffCyclePayRunInput!) {
+    saveOffCyclePayRun(offCyclePayRun: $offCyclePayRun) {
+        success
+        messages
+        offCyclePayRun {
+          payRunId
+            payGroupId
+            payGroupName
+            payGroupCalendarId
+            countryCode
+            countryName
+            payPeriod
+            payPeriodSuffix
+            payPeriodDisplay
+            periodStart
+            periodEnd
+            effectiveDate
+            payDate
+            commitDate
+            payrollLocked
+            payrollCommitted
+            payrollCommittedDate
+            isQuarterAmendment
+            isYearEndAmendment
+            hoursDisplayPrecisionInStatements
+            payRunStatus
+            geoCountryId
+            payRunDefId
+            isIPSRun
+            isFasterPayment
+            payHolidayGroupId
+            payRunDateOffset
+            payImpoundDaysOffest
+            isOffCyclePayRun
+            offCyclePayRunId
+            offCyclePayRunName
+            offCyclePayRunTypeId
+            offCyclePayRunTypeCode
+            offCycleReasonId
+            offCycleXRefCode
+            payEntryBatchId
+            impoundDate
+            glAccrualPercent
+            ledgerCode1
+            ledgerCode2
+            isAlternateFunding
+            isLateDepositRun
+            isoCurrencyCode
+        }
+    }
+}
+

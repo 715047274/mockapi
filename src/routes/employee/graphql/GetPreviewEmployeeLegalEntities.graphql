@@ -1,0 +1,5 @@
+query previewEmployeeLegalEntities($employeeId: Int!, $payRunId: Long!, $toComparePayRunId: Long) {
+    previewEmployeeLegalEntities(employeeId: $employeeId, payRunId: $payRunId, toComparePayRunId: $toComparePayRunId) {
+      legalEntityIds
+    }
+}

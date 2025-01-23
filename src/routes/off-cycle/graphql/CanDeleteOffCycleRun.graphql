@@ -1,0 +1,12 @@
+query canDeleteOffCycleRun(
+  $offCyclePayRunId: Long!
+  $ctx: ServiceContextInput!
+) {
+  canDeleteOffCycleRun(offCyclePayRunId: $offCyclePayRunId, ctx: $ctx) {
+    canDelete
+    messages {
+      messageLevel
+      messageLabel
+    }
+  }
+}

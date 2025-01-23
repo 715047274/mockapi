@@ -1,0 +1,22 @@
+query offCycleSourcePayRun(
+  $ctx: ServiceContextInput!
+  $offCyclePayRunId: Long!
+) {
+  offCycleSourcePayRun(ctx: $ctx, offCyclePayRunId: $offCyclePayRunId) {
+    payRunId
+    payGroupId
+    payPeriod
+    payPeriodSuffix
+    payPeriodDisplay
+    periodStart
+    periodEnd
+    effectiveDate
+    payDate
+    commitDate
+    payRunDefId
+    isOffCyclePayRun
+    offCyclePayRunId 
+    offCyclePayRunName
+    isFasterPayment
+  }
+}

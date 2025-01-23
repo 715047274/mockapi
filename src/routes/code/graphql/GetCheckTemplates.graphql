@@ -1,0 +1,18 @@
+query checkTemplates($ctx: ServiceContextInput!) {
+    checkTemplates(ctx: $ctx) {
+        payRunDefId
+        shortName
+        xrefCode
+        isNormal
+        isManual
+        isManualSystemDefault
+        isSystemDefault
+        isNormalSystemDefault
+        isOffCycleSystemDefault
+        employementType
+        applyDeceasedTaxation
+        isCovid19Template
+        isERetentionTemplate
+        specialPayType
+    }
+}

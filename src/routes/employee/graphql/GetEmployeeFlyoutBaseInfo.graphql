@@ -1,0 +1,12 @@
+query employeeFlyoutBaseInfo(
+    $ctx: ServiceContextInput!
+    $employeeId: Int!
+    $payRunId: Long!
+) {
+    employeeFlyoutBaseInfo(ctx: $ctx, employeeId: $employeeId, payRunId: $payRunId) {
+        employeeId
+        employeeNumber
+        employeeName
+        status
+    }
+}

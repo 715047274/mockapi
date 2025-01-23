@@ -1,0 +1,6 @@
+query quickEntriesImportSets($ctx: ServiceContextInput, $payRunId: Long!) {
+    quickEntriesImportSets(ctx: $ctx, payRunId: $payRunId) {
+        name
+        importSetId
+    }
+}

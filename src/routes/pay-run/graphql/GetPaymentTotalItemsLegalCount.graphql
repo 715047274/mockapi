@@ -1,0 +1,11 @@
+query paymentTotalItemsLegalCount(
+  $payRunId: Long!
+  $toComparePayRunId: Long
+  $summaryDisplayTypes: [Int!]!
+) {
+  paymentTotalItemsLegalCount(
+    payRunId: $payRunId
+    toComparePayRunId: $toComparePayRunId
+    summaryDisplayTypes: $summaryDisplayTypes
+  ) 
+}

@@ -1,0 +1,14 @@
+query employeeEstateInfo($ctx: ServiceContextInput!, $employeeId: Int!, $countryCode: String) 
+{  
+    employeeEstateInfo(ctx: $ctx, employeeId: $employeeId, countryCode: $countryCode) 
+    {
+        estateName
+        estateTIN
+        address1
+        address2
+        address3
+        city
+        postalCode
+        state
+    }
+}

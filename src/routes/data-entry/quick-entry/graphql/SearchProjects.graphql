@@ -1,0 +1,23 @@
+query searchProjects(
+  $ctx: ServiceContextInput!
+  $term: String
+  $payRunId: Long!
+  $adjustedPriorPeriodRunId: Long
+  $maxResults: Int
+  $moreResultText: String
+) {
+  searchProjects(
+    ctx: $ctx
+    term: $term
+    payRunId: $payRunId
+    adjustedPriorPeriodRunId: $adjustedPriorPeriodRunId
+    maxResults: $maxResults
+    moreResultText: $moreResultText
+  ) {
+    projects {
+      projectId
+      shortName
+      }
+      totalCount
+  }
+}

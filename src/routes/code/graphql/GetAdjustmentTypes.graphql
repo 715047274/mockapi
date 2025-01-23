@@ -1,0 +1,8 @@
+query adjustmentTypes($ctx: ServiceContextInput!) {
+    adjustmentTypes(ctx: $ctx) {
+        id
+        shortName
+        codeName
+        xrefCode
+    }
+}

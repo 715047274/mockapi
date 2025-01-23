@@ -1,0 +1,9 @@
+query employeePsdCodes(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+    $employeeId: Int!
+) {
+    employeePsdCodes(ctx: $ctx, payRunId: $payRunId, employeeId: $employeeId) {
+        psdCode
+    }
+}

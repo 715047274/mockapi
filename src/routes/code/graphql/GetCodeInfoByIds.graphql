@@ -1,0 +1,9 @@
+query codes($ctx: ServiceContextInput!, $countryCode: String!, $codes: [CodeBaseInfoInput]) {
+    codes(ctx: $ctx
+    countryCode: $countryCode
+    codes: $codes) {
+        codeId
+        shortName
+        codeTypeId
+    }
+}

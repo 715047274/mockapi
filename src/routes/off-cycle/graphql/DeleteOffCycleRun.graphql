@@ -1,0 +1,8 @@
+mutation deleteOffCycleRun(
+  $offCyclePayRunId: Long!
+) {
+  deleteOffCycleRun(offCyclePayRunId: $offCyclePayRunId) {
+    success
+    errorMessage
+  }
+}

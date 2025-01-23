@@ -1,0 +1,7 @@
+query PayRunStates($payRunIds: [Long!]!) {
+    payRunStates(payRunIds: $payRunIds) {
+        payRunId
+        stateType
+        updated
+    }
+}

@@ -1,0 +1,11 @@
+query priorPayRuns($payRunId: Long!, $ctx: ServiceContextInput!) {
+    priorPayRuns(payRunId: $payRunId, ctx: $ctx) {
+        payRunId
+        shortName
+        periodNumberAndYear
+        isCurrent
+        isOffCycle
+        isFuture
+        payDate
+    }
+}

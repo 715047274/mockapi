@@ -1,0 +1,11 @@
+query employeeCalculationInfo(
+    $ctx: ServiceContextInput!
+    $employeeIds: [Int!]
+    $payRunId: Long!
+) {
+    employeeCalculationInfo(ctx: $ctx, employeeIds: $employeeIds, payRunId: $payRunId) {
+        processStateCode
+        errorCount
+        lastModifiedTimestamp
+    }
+}

@@ -1,0 +1,11 @@
+query thirdPartySickPayTaxExemptions(
+    $ctx: ServiceContextInput!
+    $payRunId: Long!
+) {
+    thirdPartySickPayTaxExemptions(ctx: $ctx, payRunId: $payRunId) {
+        id
+        shortName
+        xrefCode
+        codeName
+    }
+}

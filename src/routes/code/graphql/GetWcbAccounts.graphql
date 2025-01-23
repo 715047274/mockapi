@@ -1,0 +1,11 @@
+query wcbAccounts($ctx: ServiceContextInput!) {
+    wcbAccounts(ctx: $ctx) {
+        wcbAccountId
+        legalEntityId
+        effectiveStart
+        effectiveEnd
+		shortName
+        legalEntityName
+		isTimeBased
+    }
+}

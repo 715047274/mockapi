@@ -1,0 +1,22 @@
+query employeeChangesSummary(
+    $payRunId: Long!
+    $employmentStatusType: Int!
+    $toComparePayRunId: Long
+) {
+    employeeChangesSummary(
+        payRunId: $payRunId
+        employmentStatusType: $employmentStatusType
+        toComparePayRunId: $toComparePayRunId
+    ) {
+        totalCount
+        employmentStatusType
+        differencePercentage
+        employees {
+            employeeId
+            employeeName
+            employeeNumber
+            amount
+            effectiveTime
+        }
+    }
+}

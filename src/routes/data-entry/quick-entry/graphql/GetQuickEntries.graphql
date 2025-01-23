@@ -1,0 +1,52 @@
+query quickEntries(
+    $ctx: ServiceContextInput!
+    $filters: [FilterModelInput]
+    $pagingParams: PagingParameterInput
+    $sortingParams: [SortingParameterInput]
+) {
+    quickEntries(
+        ctx: $ctx
+        filters: $filters
+        pagingParams: $pagingParams
+        sortingParams: $sortingParams
+    ) {
+        totalCount
+        items {
+            payEntryBatchDataId
+            payEntryBatchDataStageId
+            payRunId
+            employeeId
+            employeeName
+            employeeNumber
+            codeTypeId
+            codeType
+            codeName
+            hours
+            rate
+            amount
+            percent
+            savedBy
+            businessDate
+            lastUpdated
+            lastUpdatedTime
+        }
+        issuesBannerData {
+            issueBannerType
+            countOfErrors
+            payEntryBatchDataIds
+            payEntryBatchDataStageIds
+            employeeId
+            employeeName
+            messageTitle
+            businessDate
+            singleError {
+                payEntryBatchDataId
+                payEntryBatchDataStageId
+                messageTitle
+                messageLabel
+                messageParams
+                messageFields
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+How to make it work?
+
+step 1: create your local ts project and remember correct tsconfig.json target as ES2015
+    "target": "ES2015"
+
+step 2: install 2 packages
+    npm i --save-dev @types/node
+    npm i bson
+
+step 3: remember create correct sub folder under generator file folder
+    here is "generated-data"
+
+step4: open console and enter correct folder - here is "data-generator/employee-preview"
+    npx ts-node EmployeePreviewGenerator.ts
+
+then you will get your expected files in target folder.

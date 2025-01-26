@@ -5,6 +5,7 @@ type User {
     email: String!
 }
 
+
 type Query {
     getUser(role: String!): User
 }

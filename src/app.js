@@ -1,15 +1,19 @@
 import Fastify from 'fastify';
-import {registerPlugins} from "./plugins/registerPlugins.js";
+// import {registerPlugins} from "./plugins/registerPlugins.js";
 import {registerRestRoutes} from "./routes/rest.js";
-
+import registerGraphQLPlugin from "./plugins/registerPlugins.js"
 
 const fastify = Fastify({logger: true});
 
-// Register plugins (Swagger, GraphQL)
-await registerPlugins(fastify);
+// // Register plugins (Swagger, GraphQL)
+// await registerPlugins(fastify);
 
 // Register routes (REST API)
 await registerRestRoutes(fastify);
+
+
+fastify.register(registerGraphQLPlugin)
+
 
 
 // Start the server

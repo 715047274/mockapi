@@ -243,6 +243,34 @@ const mockFeatureControlProvider = {
                 }
             ],
             RoleSequence: 1
+        },
+        {
+            TargetObjectType: "DayforceApplicationContainer123456",
+            SubFeatures: [
+                {
+                    TargetObjectType: "EmployeeProfile",
+                    SubFeatures: [
+                        {
+                            TargetObjectType: "EmployeeProfile.ProfileMenu",
+                            SubFeatures: [
+                                {
+                                    TargetObjectType: "EmployeeProfile.Personal",
+                                    SubFeatures: [
+                                        {
+                                            TargetObjectType: "EmployeeProfile.PersonalContact.ConfidentialInformation",
+                                            RoleSequence: 5
+                                        }
+                                    ],
+                                    RoleSequence: 4
+                                }
+                            ],
+                            RoleSequence: 3
+                        }
+                    ],
+                    RoleSequence: 2
+                }
+            ],
+            RoleSequence: 1
         }
     ]
 }

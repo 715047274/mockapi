@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { graphqlHTTP } from "express-graphql";
-import { schema1, root1 } from "../module/graphql1Module.js";
+import { schema1, root1 } from "../module/clientPayrollPropertyModule.js";
 
 const router = Router();
-export const basePath = "/graphql1";
+export const basePath = "/MicrofrontendGraphqlGateway/PayrollFrontEndBridgeServiceAPI/ClientPayrollProperty";
 
 router.use(
     graphqlHTTP({

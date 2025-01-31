@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {mockFeatureControlProvider} from "../module/restfulModule/featureControlProvider.js";
+import {mockFeatureControlProvider, mockUser} from "../module/restfulModule/index.js";
 
 const router = Router();
 
@@ -16,7 +16,7 @@ router.post("/Main/GetFeatures", (req, res) => {
 });
 
 router.post("/Info/GetRole", (req, res) => {
-    res.status(201).json({success: true});
+    res.status(200).json(mockUser);
 });
 
 

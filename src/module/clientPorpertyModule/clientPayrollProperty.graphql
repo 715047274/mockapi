@@ -1,0 +1,9 @@
+type ClientPayrollProperty {
+    codeName: String!
+    value: String!
+    defaultValue: String!
+}
+
+type Query {
+    clientPayrollProperties(ctx: ServiceContextInput!): [ClientPayrollProperty!]!
+}

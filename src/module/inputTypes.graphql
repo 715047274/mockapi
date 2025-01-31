@@ -1,0 +1,13 @@
+input ServiceContextInput {
+    sessionTicket: String
+    controlDbKey: String
+    userId: Int
+    cultureId: Int
+    prSchemaVersions: [Int!]!
+}
+
+input OverviewPayRunFilterInput {
+    filterType: String
+    dateRangeStart: String
+    dateRangeEnd: String
+}

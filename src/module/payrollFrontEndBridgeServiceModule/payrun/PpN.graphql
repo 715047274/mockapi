@@ -1,0 +1,8 @@
+type PpN {
+    shortName: String!
+}
+
+type Query {
+    ppNs(ctx: ServiceContextInput!): [PpN!]!
+
+}

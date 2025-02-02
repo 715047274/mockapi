@@ -1,0 +1,9 @@
+type OffCycleRunType {
+    offCyclePayRunTypeId: ID!
+    shortName: String!
+    codeName: String!
+}
+
+type Query {
+    offCycleRunTypes(ctx: ServiceContextInput!): [OffCycleRunType!]!
+}

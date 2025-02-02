@@ -1,0 +1,17 @@
+
+type PayrollReasonScope {
+    reasonScopeId: ID!
+    xRefCode: String!
+}
+
+type PayrollReason {
+    reasonId: ID!
+    shortName: String!
+    countryIds: [ID!]!
+    scopeIds: [ID!]!
+    scopes: [PayrollReasonScope!]!
+}
+
+type Query {
+    payrollReasons(ctx: ServiceContextInput!): [PayrollReason!]!
+}

@@ -23,25 +23,36 @@ const loadMiddlewares = () => {
  * Load All Routes Dynamically
  */
 const loadRoutes = async () => {
-
-    // Correct relative path
     const routesDir = path.join(__dirname, "../routes");
-    //const routesDir = path.join(process.cwd(), "./src/routes");
 
-    const files = fs.readdirSync(routesDir)
+    const files = fs.readdirSync(routesDir);
     for (const file of files) {
         if (file.endsWith(".js")) {
-            const module = await import(`../routes/${file}`);
-            const {basePath} = module
-            if (basePath) {
-                const routeName = basePath || `/${file.replace(".js", "")}`; // Use `basePath` if defined
-                app.use(routeName, module.default);
-                console.log(`✅ Route Loaded: ${routeName}`);
+            const modulePath = `file://${path.join(routesDir, file)}`;
+            const module = await import(modulePath);
+
+            if (module.default) {
+                const basePath = module.basePath || `/${file.replace(".js", "")}`; // Use `basePath` if defined
+
+                const router = express.Router();
+
+                // Apply middleware if defined in the route file
+                if (module.middleware) {
+                    router.use(module.middleware);
+                    console.log(`🛠️ Middleware applied to: ${basePath}`);
+                }
+
+                // Attach the route
+                router.use("/", module.default);
+                app.use(basePath, router);
+
+                console.log(`✅ Route Loaded: ${basePath}`);
+            } else {
+                console.warn(`⚠️ Skipping ${file}: No default export found.`);
             }
         }
     }
 };
-
 /**
  * Start the Express App
  */

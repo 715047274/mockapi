@@ -1,0 +1,11 @@
+
+type UserPreference {
+    userPreferenceId: ID!
+    preferenceName: String!
+    preferenceValue: String!
+    isDefault: Boolean!
+}
+
+type Query {
+    userPreferences(ctx: ServiceContextInput, preferenceName: String): [UserPreference!]!
+}

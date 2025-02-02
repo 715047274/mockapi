@@ -1,0 +1,8 @@
+type PayRunPeriod {
+    shortName: String!
+    codeName: String!
+}
+
+type Query {
+    payRunPeriods(ctx: ServiceContextInput!): [PayRunPeriod!]!
+}

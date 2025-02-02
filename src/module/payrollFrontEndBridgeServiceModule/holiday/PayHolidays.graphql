@@ -1,0 +1,17 @@
+type PayHoliday {
+    payHolidayId: ID!
+    holidayDate: String!
+    shortName: String!
+    xRefCode: String!
+    isBankHoliday: Boolean!
+    clientId: ID!
+    geoCountryId: ID!
+    countryCode: String!
+    payHolidayGroupId: ID!
+}
+
+
+
+type Query {
+    payHolidays(ctx: ServiceContextInput!): [PayHoliday!]!
+}

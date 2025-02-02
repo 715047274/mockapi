@@ -1,0 +1,11 @@
+type userPayGroups {
+    getCountryId: Int!,
+    countryCode: String!
+}
+
+type Query {
+    userPayGroups(ctx: ServiceContextInput!): userPayGroups!
+}
+
+
+

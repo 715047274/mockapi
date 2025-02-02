@@ -3,7 +3,7 @@ input ServiceContextInput {
     controlDbKey: String
     userId: Int
     cultureId: Int
-    prSchemaVersions: [Int!]!
+    prSchemaVersions: [Int]
 }
 
 input OverviewPayRunFilterInput {
@@ -11,3 +11,4 @@ input OverviewPayRunFilterInput {
     dateRangeStart: String
     dateRangeEnd: String
 }
+

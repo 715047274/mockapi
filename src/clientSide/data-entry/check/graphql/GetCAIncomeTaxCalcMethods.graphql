@@ -1,4 +1,4 @@
-query caIncomeTaxCalcMethods($ctx: ServiceContextInput!, $countryCode: String) 
+query caIncomeTaxCalcMethods($ctx: ServiceContextInput!, $countryCode: String)
 {  
     caIncomeTaxCalcMethods(ctx: $ctx, countryCode: $countryCode) 
     {

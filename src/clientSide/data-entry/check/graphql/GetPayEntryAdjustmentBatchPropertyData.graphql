@@ -1,4 +1,4 @@
-query payEntryAdjustmentBatchPropertyData($ctx: ServiceContextInput!, $payEntryAdjustmentBatchId: Long) 
+query payEntryAdjustmentBatchPropertyData($ctx: ServiceContextInput!, $payEntryAdjustmentBatchId: Long)
 {  
     payEntryAdjustmentBatchPropertyData(ctx: $ctx, payEntryAdjustmentBatchId: $payEntryAdjustmentBatchId) 
     {

@@ -1,4 +1,4 @@
-query personAddress($ctx: ServiceContextInput!, $employeeId: Int) 
+query personAddress($ctx: ServiceContextInput!, $employeeId: Int)
 {  
     personAddress(ctx: $ctx, employeeId: $employeeId) 
     {

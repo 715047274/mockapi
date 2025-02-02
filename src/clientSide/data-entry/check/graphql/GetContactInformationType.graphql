@@ -1,4 +1,4 @@
-query contactInformationType($ctx: ServiceContextInput!) 
+query contactInformationType($ctx: ServiceContextInput!)
 {  
     contactInformationType(ctx: $ctx) 
     {

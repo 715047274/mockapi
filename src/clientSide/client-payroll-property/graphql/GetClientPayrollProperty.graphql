@@ -1,4 +1,4 @@
-query clientPayrollProperties($ctx: ServiceContextInput!) {
+query clientPayrollProperties($ctx: ServiceContextInput) {
     clientPayrollProperties(ctx: $ctx) {
         codeName
         defaultValue

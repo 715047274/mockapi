@@ -1,14 +1,19 @@
-import {mockPayRunPeriods, mockPpns, mockPayRunsWithProcessState} from '/mockData.js'
+import {mockPayRunPeriods, mockPpns, mockPayRunsWithProcessState} from './mockData.js'
 
 
-const PayRunResolvers = {
-    Query:{
-        payRunPeriods: ({ctx})=>{},
-        ppNs:({ctx}) =>{}
+const payRunResolvers = {
+    Query: {
+        payRunsWithProcessState: ({ctx}) => {
+            return mockPayRunsWithProcessState
+        },
+        ppNs: ({ctx}) => {
+            return mockPpns
+        },
+        payRunPeriods: ({ctx}) => {
+            return mockPayRunPeriods
+        }
+    }
 }
-}
 
 
-
-
-return {PayRunResolvers}
+export {payRunResolvers}

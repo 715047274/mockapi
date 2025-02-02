@@ -1,8 +1,8 @@
 input ServiceContextInput {
-    sessionTicket: String
-    controlDbKey: String
-    userId: Int
-    cultureId: Int
+    sessionTicket: String = null
+    controlDbKey: String =null
+    userId: Int = null
+    cultureId: Int = null
     prSchemaVersions: [Int]
 }
 

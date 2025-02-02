@@ -3,7 +3,8 @@ import fs from "fs";
 import path from "path";
 import {loggerMiddleware, fileLoggerMiddleware} from "../middleware/logger.js";
 import {PORT} from "../config/serverConfig.js";
-import {fileURLToPath} from "url"; // Required for relative path resolution
+import {fileURLToPath} from "url";
+import injectCtxMiddleware from "../middleware/injectCtxMiddleware.js"; // Required for relative path resolution
 
 const app = express();
 
@@ -16,7 +17,8 @@ const __dirname = path.dirname(__filename);
  */
 const loadMiddlewares = () => {
     app.use(loggerMiddleware); // Logs to console
-    app.use(fileLoggerMiddleware); // Logs to file
+    app.use(fileLoggerMiddleware);
+    // app.use(injectCtxMiddleware())// Logs to file
 };
 
 /**

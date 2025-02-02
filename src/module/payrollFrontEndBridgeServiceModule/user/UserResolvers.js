@@ -5,3 +5,4 @@ const userResolvers = {
         userPayGroups: (_, {ctx}) => { return mockUserPayGroups}
     }
 }
+export {userResolvers}

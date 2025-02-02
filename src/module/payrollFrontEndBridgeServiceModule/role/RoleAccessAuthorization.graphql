@@ -1,0 +1,12 @@
+type RoleAccessAuthorization {
+    roleAccessAuthorizationId: ID!
+    codeName: String!
+    canCreate: Boolean!
+    canUpdate: Boolean!
+    canRead: Boolean!
+    canDelete: Boolean!
+}
+
+type Query {
+    roleAccessAuthorizations(ctx: ServiceContextInput!, accessAuthorizationName: String): [RoleAccessAuthorization]
+}

@@ -1,7 +1,11 @@
+import {mockPayrollReasons} from "./mockData.js";
+
 const codeResolvers = {
     Query:{
         payrollReasons: ({ctx})=>{
-           return {}
+           return mockPayrollReasons
         }
     }
 }
+
+export {codeResolvers}

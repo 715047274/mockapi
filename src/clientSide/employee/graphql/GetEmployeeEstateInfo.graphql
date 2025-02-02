@@ -1,4 +1,4 @@
-query employeeEstateInfo($ctx: ServiceContextInput!, $employeeId: Int!, $countryCode: String) 
+query employeeEstateInfo($ctx: ServiceContextInput!, $employeeId: Int!, $countryCode: String)
 {  
     employeeEstateInfo(ctx: $ctx, employeeId: $employeeId, countryCode: $countryCode) 
     {

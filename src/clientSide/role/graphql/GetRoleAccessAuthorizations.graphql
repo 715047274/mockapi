@@ -1,4 +1,4 @@
-query roleAccessAuthorizations($ctx: ServiceContextInput!, $accessAuthorizationName: String) 
+query roleAccessAuthorizations($ctx: ServiceContextInput!, $accessAuthorizationName: String)
  {
     roleAccessAuthorizations(ctx: $ctx, accessAuthorizationName:$accessAuthorizationName){
         roleAccessAuthorizationId

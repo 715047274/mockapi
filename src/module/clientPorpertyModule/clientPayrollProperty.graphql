@@ -5,5 +5,5 @@ type ClientPayrollProperty {
 }
 
 type Query {
-    clientPayrollProperties(ctx: ServiceContextInput!): [ClientPayrollProperty!]!
+    clientPayrollProperties(ctx: ServiceContextInput): [ClientPayrollProperty!]!
 }

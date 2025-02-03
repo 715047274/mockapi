@@ -1,0 +1,13 @@
+type Query {
+    payRunProgress(payRunId: Int!): PayRunProgress!
+}
+
+type PayRunProgress {
+    payRunProcessState: String!
+    payrollCommitted: Boolean!
+    payrollCommittedDate: String
+    payRunBlocked: Boolean!
+    remainingTime: Int
+    lastUpdateTimestamp: String
+    currentTimestamp: String!
+}

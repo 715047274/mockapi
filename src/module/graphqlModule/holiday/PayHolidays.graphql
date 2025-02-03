@@ -13,5 +13,5 @@ type PayHoliday {
 
 
 type Query {
-    payHolidays(ctx: ServiceContextInput!): [PayHoliday!]!
+    payHolidays(ctx: ServiceContextInput): [PayHoliday!]!
 }

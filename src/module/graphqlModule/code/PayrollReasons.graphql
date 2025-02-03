@@ -5,13 +5,13 @@ type PayrollReasonScope {
 }
 
 type PayrollReason {
-    reasonId: ID!
-    shortName: String!
-    countryIds: [ID!]!
-    scopeIds: [ID!]!
+    reasonId: ID
+    shortName: String
+    countryIds: [ID]
+    scopeIds: String
     scopes: [PayrollReasonScope!]!
 }
 
 type Query {
-    payrollReasons(ctx: ServiceContextInput!): [PayrollReason!]!
+    payrollReasons(ctx: ServiceContextInput): [PayrollReason!]!
 }

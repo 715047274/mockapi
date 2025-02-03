@@ -4,5 +4,5 @@ type PayRunPeriod {
 }
 
 type Query {
-    payRunPeriods(ctx: ServiceContextInput!): [PayRunPeriod!]!
+    payRunPeriods(ctx: ServiceContextInput): [PayRunPeriod!]!
 }

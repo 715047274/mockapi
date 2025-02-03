@@ -1,0 +1,60 @@
+type PayRunItem {
+    payRunId: ID
+    payGroupId: ID
+    payGroupName: String
+    payGroupIdentifier: String
+    payGroupCalendarId: ID
+    countryCode: String
+    countryName: String
+    payPeriod: String
+    payPeriodSuffix: String
+    payPeriodDisplay: String
+    periodStart: String
+    periodEnd: String
+    effectiveDate: String
+    payDate: String
+    commitDate: String
+    payrollLocked: Boolean
+    payrollCommitted: Boolean
+    payrollCommittedDate: String
+    isQuarterAmendment: Boolean
+    isYearEndAmendment: Boolean
+    hoursDisplayPrecisionInStatements: Int
+    payRunStatus: String
+    geoCountryId: ID
+    payRunDefId: ID
+    isIPSRun: Boolean
+    isFasterPayment: Boolean
+    payHolidayGroupId: ID
+    payRunDateOffset: Int
+    payImpoundDaysOffest: Int
+    isOffCyclePayRun: Boolean
+    offCyclePayRunId: ID
+    offCyclePayRunName: String
+    offCyclePayRunTypeId: ID
+    offCyclePayRunTypeCode: String
+    offCycleReasonId: ID
+    offCycleXRefCode: String
+    payEntryBatchId: ID
+    impoundDate: String
+    glAccrualPercent: Float
+    ledgerCode1: String
+    ledgerCode2: String
+    isAlternateFunding: Boolean
+    isLateDepositRun: Boolean
+    isoCurrencyCode: String
+}
+type PayRunWithProcessState {
+    totalCount: Int!
+    items: [PayRunItem!]!
+}
+
+type Query {
+    payRunsWithProcessState(
+        ctx: ServiceContextInput
+        skip: Int!
+        take: Int!
+        filter: OverviewPayRunFilterInput!
+        searchTerm: String!
+    ): PayRunWithProcessState!
+}

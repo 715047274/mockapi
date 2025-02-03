@@ -25,7 +25,7 @@ const mockUserPreferences = [{
     userPreferenceId: 115,
     preferenceName: "EMPLOYEE_PANEL_MAXIMIZE_WINDOW",
     preferenceValue: "false",
-    isDefault: null
+    isDefault: true
 }]
 
 

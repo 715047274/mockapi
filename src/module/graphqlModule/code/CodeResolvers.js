@@ -1,9 +1,9 @@
 import {mockPayrollReasons} from "./mockData.js";
 
 const codeResolvers = {
-    Query:{
-        payrollReasons: ({ctx})=>{
-           return mockPayrollReasons
+    Query: {
+        payrollReasons: (_, {ctx}) => {
+            return mockPayrollReasons
         }
     }
 }

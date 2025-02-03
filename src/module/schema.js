@@ -17,12 +17,12 @@ const typeDefs = mergeTypeDefs(loadFilesSync((path.join(__dirname,"**/*.graphql"
 import {clientPropertyResolvers} from "./clientPorpertyModule/clientPropertyResolvers.js";
 
 // graphql
-import {userResolvers} from './payrollFrontEndBridgeServiceModule/user/UserResolvers.js'
-import {codeResolvers} from './payrollFrontEndBridgeServiceModule/code/CodeResolvers.js'
-import {roleResolvers} from './payrollFrontEndBridgeServiceModule/role/RoleResolvers.js'
-import {payRunResolvers} from './payrollFrontEndBridgeServiceModule/payrun/PayRunResolvers.js'
-import {payHolidaysResolvers} from './payrollFrontEndBridgeServiceModule/holiday/PayHolidaysResolvers.js'
-import {offCycleResolvers} from './payrollFrontEndBridgeServiceModule/offCycle/OffCycleResolvers.js'
+import {userResolvers} from './graphqlModule/user/UserResolvers.js'
+import {codeResolvers} from './graphqlModule/code/CodeResolvers.js'
+import {roleResolvers} from './graphqlModule/role/RoleResolvers.js'
+import {payRunResolvers} from './graphqlModule/payrun/PayRunResolvers.js'
+import {payHolidaysResolvers} from './graphqlModule/holiday/PayHolidaysResolvers.js'
+import {offCycleResolvers} from './graphqlModule/offCycle/OffCycleResolvers.js'
 
 
 const resolvers = mergeResolvers([

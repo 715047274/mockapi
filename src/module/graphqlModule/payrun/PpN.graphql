@@ -3,6 +3,6 @@ type PpN {
 }
 
 type Query {
-    ppNs(ctx: ServiceContextInput!): [PpN!]!
+    ppNs(ctx: ServiceContextInput): [PpN!]!
 
 }

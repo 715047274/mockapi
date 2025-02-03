@@ -10,5 +10,8 @@ input OverviewPayRunFilterInput {
     filterType: String
     dateRangeStart: String
     dateRangeEnd: String
+    calculationStatuses: [String]  # Already defined
+    runTypes: [String]
+    payRunPeriods: [String]
+    ppNs: [String]
 }
-

@@ -1,0 +1,15 @@
+type userPayGroups {
+    payGroupId: Int
+    geoCountryId: Int
+    onDemandPayEnabled: Boolean
+    ipsEnabled: Boolean
+    countryCode: String
+
+}
+
+type Query {
+    userPayGroups(ctx: ServiceContextInput): userPayGroups!
+}
+
+
+

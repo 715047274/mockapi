@@ -18,7 +18,8 @@ const __dirname = path.dirname(__filename);
 const loadMiddlewares = () => {
     app.use(loggerMiddleware); // Logs to console
     app.use(fileLoggerMiddleware);
-    // app.use(injectCtxMiddleware())// Logs to file
+    app.use(express.json())
+    app.use(injectCtxMiddleware)// Logs to file
 };
 
 /**
@@ -37,7 +38,6 @@ const loadRoutes = async () => {
                 const basePath = module.basePath || `/${file.replace(".js", "")}`; // Use `basePath` if defined
 
                 const router = express.Router();
-
                 // Apply middleware if defined in the route file
                 if (module.middleware) {
                     router.use(module.middleware);
@@ -59,7 +59,7 @@ const loadRoutes = async () => {
  * Start the Express App
  */
 const startApp = () => {
-    app.listen(PORT, () => {
+     app.listen(PORT, () => {
         console.log(`🚀 Server running at http://localhost:${PORT}`);
     });
 };

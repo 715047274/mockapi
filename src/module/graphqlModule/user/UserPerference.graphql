@@ -7,5 +7,5 @@ type UserPreference {
 }
 
 type Query {
-    userPreferences(ctx: ServiceContextInput!, preferenceName: String): [UserPreference!]!
+    userPreferences(ctx: ServiceContextInput, preferenceName: String): [UserPreference!]!
 }

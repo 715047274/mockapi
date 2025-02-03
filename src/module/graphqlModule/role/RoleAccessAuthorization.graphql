@@ -8,5 +8,5 @@ type RoleAccessAuthorization {
 }
 
 type Query {
-    roleAccessAuthorizations(ctx: ServiceContextInput!, accessAuthorizationName: String): [RoleAccessAuthorization]
+    roleAccessAuthorizations(ctx: ServiceContextInput, accessAuthorizationName: String): [RoleAccessAuthorization]
 }

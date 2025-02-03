@@ -1,0 +1,25 @@
+
+type Query {
+    compositePayRunStates(payRunId: Int, payRunIds: [Int!]!): PayRunProgressResponse!
+}
+
+type PayRunProgressResponse {
+    payRunProgress: PayRunProgress!
+    payRunStates: [PayRunState!]!
+}
+
+type PayRunProgress {
+    payRunProcessState: String!
+    payRunBlocked: Boolean!
+    remainingTime: Int
+    lastUpdateTimestamp: String
+    currentTimestamp: String!
+    payrollCommittedDate: String
+    previewGenerating: Boolean!
+}
+
+type PayRunState {
+    payRunId: ID!
+    stateType: String!
+    updated: Int!
+}

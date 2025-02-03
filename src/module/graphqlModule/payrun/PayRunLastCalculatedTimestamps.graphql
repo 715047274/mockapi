@@ -1,0 +1,8 @@
+type Query {
+    payRunLastCalculatedTimestamps(payRunIds: [Int!]!): [PayRunTimestamp!]!
+}
+
+type PayRunTimestamp {
+    payRunId: ID!
+    lastCalculatedTimestamp: String!
+}

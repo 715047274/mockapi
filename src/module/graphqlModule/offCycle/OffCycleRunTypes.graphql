@@ -5,5 +5,5 @@ type OffCycleRunType {
 }
 
 type Query {
-    offCycleRunTypes(ctx: ServiceContextInput!): [OffCycleRunType!]!
+    offCycleRunTypes(ctx: ServiceContextInput): [OffCycleRunType!]!
 }

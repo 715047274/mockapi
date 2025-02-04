@@ -1,0 +1,14 @@
+type Query {
+    employeeWageAttachmentCodesByIds(ctx: ServiceContextInput, codeIds: [Int!]): [EmployeeWageAttachmentCode!]!
+}
+
+type EmployeeWageAttachmentCode {
+    uniqueId: ID!
+    codeId: Int!
+    codeTypeId: Int!
+    shortName: String!
+    isPayEntryWageAttachment: Boolean!
+    employeeId: Int!
+    isActive: Boolean!
+    garnishmentLimitAmount: Float
+}

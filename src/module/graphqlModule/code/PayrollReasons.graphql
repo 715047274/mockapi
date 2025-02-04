@@ -1,4 +1,3 @@
-
 type PayrollReasonScope {
     reasonScopeId: ID!
     xRefCode: String!

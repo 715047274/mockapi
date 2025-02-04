@@ -1,0 +1,10 @@
+scalar Long
+
+type Query {
+    payRunLastCalculatedTimestamps(payRunIds: [Long!]!): [PayRunTimestamp!]!
+}
+
+type PayRunTimestamp {
+    payRunId: Long!
+    lastCalculatedTimestamp: String!
+}

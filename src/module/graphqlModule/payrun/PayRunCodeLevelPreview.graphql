@@ -1,0 +1,50 @@
+scalar Long
+
+type Query {
+    previewCodeLevelSummary(
+        payRunId: Long!
+        itemType: Int!
+        skip: Int!
+        take: Int!
+        toComparePayRunId: Long
+        legalEntityIds: [Int!]
+    ): CodeLevelSummary!
+}
+
+type CodeLevelSummary {
+    totalCount: Int!
+    items: [CodeLevelSummaryItem!]!
+}
+
+type CodeLevelSummaryItem {
+    itemType: Int!
+    codeType: String!
+    itemId: ID!
+    amount: Float!
+    toCompareAmount: Float
+    varianceAmount: Float
+    hours: Float
+    toCompareHours: Float
+    varianceHours: Float
+    employeeCount: Int!
+    toCompareEmployeeCount: Int
+    varianceEmployeeCount: Int
+    adjustmentAmount: Float
+    varianceAdjustmentAmount: Float
+    toCompareAdjustmentAmount: Float
+    limitedTaxableWages: Float
+    varianceLimitedTaxableWages: Float
+    toCompareLimitedTaxableWages: Float
+    totalTaxableWages: Float
+    varianceTotalTaxableWages: Float
+    toCompareTotalTaxableWages: Float
+    mtdAmount: Float
+    varianceMtdAmount: Float
+    toCompareMtdAmount: Float
+    ytdAmount: Float
+    varianceYtdAmount: Float
+    toCompareYtdAmount: Float
+    qtdAmount: Float
+    varianceQtdAmount: Float
+    toCompareQtdAmount: Float
+}

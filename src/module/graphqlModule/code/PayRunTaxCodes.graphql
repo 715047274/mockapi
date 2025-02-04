@@ -1,0 +1,22 @@
+scalar Long
+
+type Query {
+    payRunTaxCodes(ctx: ServiceContextInput!, payRunId: Long!): [PayRunTaxCode!]!
+}
+
+
+type PayRunTaxCode {
+    uniqueId: ID!
+    codeId: ID!
+    codeTypeId: ID!
+    shortName: String!
+    defaultCheckTypeId: ID
+    isHoursRateInPayEntryEnabled: Boolean!
+    isHoursRateInPayEntryErrorOverride: Boolean!
+    isGenerated: Boolean!
+    isActive: Boolean!
+    isWcbDeduction: Boolean!
+    processForEmployment: Boolean!
+    taxCategoryId: ID!
+    taxAuthorityInstanceId: ID!
+}

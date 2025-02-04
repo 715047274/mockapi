@@ -15,3 +15,9 @@ input OverviewPayRunFilterInput {
     payRunPeriods: [String]
     ppNs: [String]
 }
+
+input CodeBaseInfoInput {
+    codeId: ID
+    shortName: String
+    codeTypeId: ID
+}

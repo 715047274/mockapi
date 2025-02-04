@@ -1,0 +1,9 @@
+type Query {
+    distributionCodes(ctx: ServiceContextInput!): [DistributionCode!]!
+}
+
+
+type DistributionCode {
+    shortName: String!
+    codeName: String!
+}

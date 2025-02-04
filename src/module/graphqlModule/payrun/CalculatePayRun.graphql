@@ -1,0 +1,19 @@
+scalar Long
+
+type Mutation {
+    calculatePayRun(payRunId: Long!, isForceRecalc: Boolean!): PayRunCalculationResult!
+}
+
+type PayRunCalculationResult {
+    payRunId: Long!
+    success: Boolean!
+    message: CalculationMessage
+}
+
+type CalculationMessage {
+    messageKey: String!
+    messageTitle: String!
+    messageText: String!
+    messageLevel: String!
+    messageParams: String!
+}

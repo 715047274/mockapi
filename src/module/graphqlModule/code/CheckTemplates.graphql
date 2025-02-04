@@ -1,0 +1,21 @@
+type Query {
+    checkTemplates(ctx: ServiceContextInput!): [CheckTemplate!]!
+}
+
+
+type CheckTemplate {
+    payRunDefId: ID!
+    shortName: String!
+    xrefCode: String
+    isNormal: Boolean!
+    isManual: Boolean!
+    isManualSystemDefault: Boolean!
+    isSystemDefault: Boolean!
+    isNormalSystemDefault: Boolean!
+    isOffCycleSystemDefault: Boolean!
+    employementType: String
+    applyDeceasedTaxation: Boolean!
+    isCovid19Template: Boolean!
+    isERetentionTemplate: Boolean!
+    specialPayType: String
+}

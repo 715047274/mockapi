@@ -1,0 +1,16 @@
+scalar Long
+
+type Query {
+    taxWageTypes(ctx: ServiceContextInput!, payRunId: Long!, payrollTaxId: Int): [TaxWageType!]!
+}
+
+
+
+type TaxWageType {
+    taxAuthorityInstanceId: ID!
+    taxWageTypeId: ID!
+    taxWageTypeCode: String!
+    taxWageTypeDescription: String!
+    effectiveStart: String!
+    effectiveEnd: String
+}

@@ -1,4 +1,4 @@
-import {mockPayRunPeriods, mockPpns, mockPayRunsWithProcessState, mockPayRunLastCalculatedTimestamps, mockPayRunProgressResponse} from './mockData.js'
+import {mockPayRunPeriods, mockPpns, mockPayRunsWithProcessState} from './mockData.js'
 
 
 const payRunResolvers = {
@@ -12,8 +12,6 @@ const payRunResolvers = {
         payRunPeriods: (_, {ctx}) => {
             return mockPayRunPeriods
         },
-        payRunLastCalculatedTimestamps: (_,{payRunIds})=>{ return mockPayRunLastCalculatedTimestamps},
-        compositePayRunStates:(_, {payRunId,payRunIds })=>{ return mockPayRunProgressResponse}
     }
 }
 

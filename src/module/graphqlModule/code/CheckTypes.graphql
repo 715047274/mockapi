@@ -1,0 +1,11 @@
+type Query {
+    checkTypes(ctx: ServiceContextInput!, includeAllType: Boolean!): [CheckType!]!
+}
+
+
+type CheckType {
+    payRunCheckTypeId: ID!
+    shortName: String!
+    codeName: String!
+    xrefCode: String
+}

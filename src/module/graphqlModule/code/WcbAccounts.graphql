@@ -1,0 +1,14 @@
+type Query {
+    wcbAccounts(ctx: ServiceContextInput!): [WCBAccount!]!
+}
+
+
+type WCBAccount {
+    wcbAccountId: ID!
+    legalEntityId: ID!
+    effectiveStart: String!
+    effectiveEnd: String
+    shortName: String!
+    legalEntityName: String!
+    isTimeBased: Boolean!
+}

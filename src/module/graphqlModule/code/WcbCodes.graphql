@@ -1,0 +1,14 @@
+
+type Query {
+    wcbCodes(ctx: ServiceContextInput!): [WCBCode!]!
+}
+
+type WCBCode {
+    wcbCodeId: ID!
+    geoStateId: ID!
+    countryCode: String!
+    xrefCode: String
+    shortName: String!
+    stateCode: String!
+    wcbCodeCode: String!
+}

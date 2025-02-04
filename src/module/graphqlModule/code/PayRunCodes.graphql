@@ -1,0 +1,31 @@
+scalar Long
+
+type Query {
+    payRunCodes(ctx: ServiceContextInput!, payRunId: Long!): [PayRunCode!]!
+}
+
+
+type PayRunCode {
+    uniqueId: ID!
+    codeId: ID!
+    codeTypeId: ID!
+    shortName: String!
+    defaultCheckTypeId: ID
+    isHoursRateInPayEntryEnabled: Boolean!
+    isHoursRateInPayEntryErrorOverride: Boolean!
+    isGenerated: Boolean!
+    isActive: Boolean!
+    isWcbDeduction: Boolean!
+    processForEmployment: Boolean!
+    isEmployerDeduction: Boolean!
+    payoutBalanceId: ID
+    isFlsaAdjustable: Boolean!
+    allowPayee: Boolean!
+    allowImpromptuArrears: Boolean!
+    debitArrearsByDefault: Boolean!
+    isPayEntryWageAttachment: Boolean!
+    earningTaxability: String
+    earningTypeCodeName: String!
+    isInternal: Boolean!
+    useInPayrollEntry: Boolean!
+}

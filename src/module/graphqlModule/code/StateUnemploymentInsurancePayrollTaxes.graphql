@@ -1,0 +1,15 @@
+scalar Long
+
+type Query {
+    stateUnemploymentInsurancePayrollTaxes(ctx: ServiceContextInput!, payRunId: Long!): StateUnemploymentInsurancePayrollTax!
+}
+
+
+type TaxAuthorityInstance {
+    wageAndTaxValidationGroupCodeName: String!
+    taxAuthorityInstanceId: ID!
+}
+
+type StateUnemploymentInsurancePayrollTax {
+    taxAuthorityInstances: [TaxAuthorityInstance!]!
+}

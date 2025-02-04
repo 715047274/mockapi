@@ -1,0 +1,10 @@
+type Code {
+    codeId: ID!
+    shortName: String!
+    codeTypeId: ID!
+}
+
+type Query {
+    codes(ctx: ServiceContextInput!, countryCode: String!, codes: [CodeBaseInfoInput]): [Code!]!
+}
+

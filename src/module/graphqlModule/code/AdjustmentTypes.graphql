@@ -1,0 +1,12 @@
+
+type Query {
+    adjustmentTypes(ctx: ServiceContextInput!): [AdjustmentType!]!
+}
+
+
+type AdjustmentType {
+    id: ID!
+    shortName: String!
+    codeName: String!
+    xrefCode: String
+}

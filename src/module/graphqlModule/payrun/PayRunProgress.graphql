@@ -1,5 +1,7 @@
+scalar Long
+
 type Query {
-    payRunProgress(payRunId: Int!): PayRunProgress!
+    payRunProgress(payRunId: Long!): PayRunProgress!
 }
 
 type PayRunProgress {

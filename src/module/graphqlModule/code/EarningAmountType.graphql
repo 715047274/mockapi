@@ -1,0 +1,13 @@
+type EarningAmountType {
+    earningAmountTypeId: ID!
+    codeName: String!
+    amount: Float!
+    effectiveStart: String!
+    effectiveEnd: String
+    earningId: Int!
+}
+
+type Query {
+    earningAmountTypes(ctx: ServiceContextInput, earningId: Int): [EarningAmountType!]!
+}
+

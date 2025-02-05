@@ -9,13 +9,13 @@ type PayRunProgressResponse {
 }
 
 type PayRunProgress {
-    payRunProcessState: String!
+    payRunProcessState: String
     payRunBlocked: Boolean!
     remainingTime: Int
     lastUpdateTimestamp: String
-    currentTimestamp: String!
+    currentTimestamp: String
     payrollCommittedDate: String
-    previewGenerating: Boolean!
+    previewGenerating: Boolean
 }
 
 type PayRunState {

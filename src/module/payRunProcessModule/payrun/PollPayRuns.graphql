@@ -1,0 +1,36 @@
+# Represents the process state of a pay run
+scalar Long
+# Represents issue count for a specific pay run
+type PayRunIssue {
+    payRunId: Long!
+    messageCode: String!
+    total: Int!
+}
+
+# Represents the process state of a pay run
+type PayRunProcessState {
+    payRunId: Long
+    payRunStatus: String
+    payRunBlocked: Boolean
+    payrollCommitted: Boolean
+    payrollCommittedDate: String
+    calculationStatus: String
+    detailedCalculationStatus: String
+}
+
+# The response type for pollPayRuns query
+type PollPayRunsResponse {
+    payRunProcessStates: [PayRunProcessState]
+    payRunIssuesCount: [PayRunIssue]
+}
+
+# Root Query Type
+type Query {
+    pollPayRuns(payRunIds: [Long], ctx: ServiceContextInput): PollPayRunsResponse!
+    payRunProcessStates(payRunIds: [Long], ctx: ServiceContextInput): [PayRunProcessState]
+    payRunIssuesCount(payRunIds: [Long], ctx: ServiceContextInput): [PayRunIssue]
+
+}
+
+
+

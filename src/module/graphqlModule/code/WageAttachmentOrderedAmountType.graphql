@@ -1,0 +1,12 @@
+# Represents a Wage Attachment Ordered Amount Type
+type WageAttachmentOrderedAmountType {
+    wageAttachmentOrderedAmountTypeId: ID!
+    countryCode: String!
+    shortName: String!
+    codeName: String!
+}
+
+# Root Query Type
+type Query {
+    wageAttachmentOrderedAmountTypes(ctx: ServiceContextInput!): [WageAttachmentOrderedAmountType!]!
+}

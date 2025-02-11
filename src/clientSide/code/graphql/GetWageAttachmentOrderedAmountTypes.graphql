@@ -1,8 +1,0 @@
-query wageAttachmentOrderedAmountTypes($ctx: ServiceContextInput!) {
-    wageAttachmentOrderedAmountTypes(ctx: $ctx) {
-        wageAttachmentOrderedAmountTypeId
-        countryCode
-		shortName
-		codeName
-    }
-}

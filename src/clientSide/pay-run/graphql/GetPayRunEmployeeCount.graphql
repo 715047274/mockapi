@@ -1,8 +1,0 @@
-query payRunEmployeeCount($ctx: ServiceContextInput!, $payRunId: Long!) {
-  payRunEmployeeCount(
-    ctx: $ctx
-    payRunId: $payRunId
-  ) {
-      countOfEmployeesInPayrun
-    }
-  }

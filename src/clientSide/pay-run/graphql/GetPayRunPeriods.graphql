@@ -1,6 +1,0 @@
-query payRunPeriods($ctx: ServiceContextInput!) {
-    payRunPeriods(ctx: $ctx) {
-        shortName
-        codeName
-    }
-}

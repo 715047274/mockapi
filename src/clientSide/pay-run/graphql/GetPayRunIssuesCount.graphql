@@ -1,7 +1,0 @@
-query payRunIssuesCount($payRunIds: [Long!]!, $ctx: ServiceContextInput!) {
-    payRunIssuesCount(payRunIds: $payRunIds, ctx: $ctx) {
-        payRunId
-        messageCode
-        total
-    }
-}

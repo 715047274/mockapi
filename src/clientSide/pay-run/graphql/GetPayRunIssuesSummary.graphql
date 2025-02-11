@@ -1,7 +1,0 @@
-query payRunIssuesSummary($payRunId: Long!, $ctx: ServiceContextInput!) {
-    payRunIssuesSummary(payRunId: $payRunId, ctx: $ctx) {
-        messageCategoryShortName
-        messageLevelId
-        count
-    }
-}

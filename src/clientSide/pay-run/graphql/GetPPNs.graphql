@@ -1,5 +1,0 @@
-query ppNs($ctx: ServiceContextInput!) {
-    ppNs(ctx: $ctx) {
-        shortName
-    }
-}

@@ -1,7 +1,0 @@
-query clientPayrollProperties($ctx: ServiceContextInput) {
-    clientPayrollProperties(ctx: $ctx) {
-        codeName
-        defaultValue
-        value
-    }
-}

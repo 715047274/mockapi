@@ -1,9 +1,0 @@
-query userLayouts($user: String!, $breakpoint: String!) {
-    userLayouts(user: $user, breakpoint: $breakpoint) {
-        id
-        category
-        breakpoint
-        user
-        layout
-    }
-}

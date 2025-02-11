@@ -1,9 +1,0 @@
-query userPreferences($ctx: ServiceContextInput, $preferenceName: String) 
-{
-    userPreferences(ctx: $ctx, preferenceName:$preferenceName) {
-        userPreferenceId
-        preferenceName,
-        preferenceValue,
-        isDefault
-    }
-}

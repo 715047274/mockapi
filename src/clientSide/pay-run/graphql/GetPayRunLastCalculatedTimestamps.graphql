@@ -1,6 +1,0 @@
-query payRunLastCalculatedTimestamps($payRunIds: [Long!]!) {
-    payRunLastCalculatedTimestamps(payRunIds: $payRunIds) {
-        payRunId
-        lastCalculatedTimestamp
-    }
-}

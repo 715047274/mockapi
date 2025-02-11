@@ -1,7 +1,0 @@
-query offCycleRunTypes($ctx: ServiceContextInput!) {
-    offCycleRunTypes(ctx: $ctx) {
-        offCyclePayRunTypeId
-        shortName
-        codeName
-    }
-}

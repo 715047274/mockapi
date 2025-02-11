@@ -1,6 +1,0 @@
-mutation deleteUserLayoutsByCategory($user: String!, $category: Int!) {
-    deleteUserLayoutsByCategory(user: $user, category: $category) {
-        isAcknowledged
-        deletedCount
-    }
-}

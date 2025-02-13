@@ -21,3 +21,26 @@ input CodeBaseInfoInput {
     shortName: String
     codeTypeId: ID
 }
+
+input CreateLayoutInput {
+    category: String!
+    breakpoint: String!
+    user: String!
+    layout: String!
+}
+
+input FilterModelInput {
+    field: String
+    operator: String
+    value: String
+}
+
+input OrderInput {
+    field: String!
+    direction: OrderDirection!
+}
+
+enum OrderDirection {
+    ASC
+    DESC
+}

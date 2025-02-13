@@ -1,0 +1,20 @@
+type Query {
+    payRunEmployeeProcessStateCount(
+        ctx: ServiceContextInput!,
+        payRunIds: [Long!],
+        withCommittingCount: Boolean
+    ): [PayRunEmployeeProcessStateCount]
+}
+
+type PayRunEmployeeProcessStateCount {
+    payRunId: Long
+    calculatedCount: CalculatedCount
+}
+
+type CalculatedCount {
+    count: Int
+    percent: Float
+}
+
+ 
+scalar Long

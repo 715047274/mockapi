@@ -1,0 +1,30 @@
+type Query {
+    dataEntryIssuesBannerGridData(
+        ctx: ServiceContextInput,
+        filters: [FilterModelInput]
+    ): [DataEntryIssueBanner]
+}
+
+type DataEntryIssueBanner {
+    issueBannerType: String
+    countOfErrors: Int
+    payEntryBatchDataIds: [Long]
+    payEntryBatchDataStageIds: [Long]
+    payEntryAdjustmentBatchIds: [Long]
+    employeeId: Int
+    employeeName: String
+    businessDate: String
+    singleError: PayRunMessage
+}
+
+type PayRunMessage {
+    payRunMessageId: Long
+    payRunMessageLevelId: Int
+    payEntryBatchDataId: Long
+    payEntryBatchDataStageId: Long
+    messageTitle: String
+    messageLabel: String
+    messageParams: [String]
+}
+
+scalar Long

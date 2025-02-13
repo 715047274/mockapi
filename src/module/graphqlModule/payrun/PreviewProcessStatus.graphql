@@ -1,0 +1,13 @@
+type Query {
+    previewProcessStatus(
+        payRunId1: Long!,
+        payRunId2: Long,
+        allowRequestGenerate: Boolean!
+    ): PreviewProcessStatusResponse
+}
+
+type PreviewProcessStatusResponse {
+    previewStatus: String
+}
+
+scalar Long

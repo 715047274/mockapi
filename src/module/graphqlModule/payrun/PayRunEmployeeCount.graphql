@@ -1,0 +1,14 @@
+type Query {
+    payRunEmployeeCount(
+        ctx: ServiceContextInput!,
+        payRunId: Long!
+    ): PayRunEmployeeCountResponse
+}
+
+type PayRunEmployeeCountResponse {
+    countOfEmployeesInPayrun: Int
+}
+
+ 
+
+scalar Long

@@ -1,0 +1,16 @@
+type Query {
+    payRunMessageTypes(
+        ctx: ServiceContextInput!,
+        payRunId: Long,
+        returnDistinctShortName: Boolean
+    ): [PayRunMessageType]
+}
+
+type PayRunMessageType {
+    messageTypeId: Int
+    shortName: String
+    longName: String
+}
+
+
+scalar Long

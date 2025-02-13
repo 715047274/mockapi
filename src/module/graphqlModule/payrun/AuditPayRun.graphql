@@ -1,0 +1,15 @@
+type Mutation {
+    inAuditPayRun(
+        payRunId: Long!,
+        userId: Int!,
+        isLock: Boolean
+    ): InAuditPayRunResponse
+}
+
+type InAuditPayRunResponse {
+    payRunId: Long
+    success: Boolean
+    message: CalculationMessage
+}
+ 
+scalar Long

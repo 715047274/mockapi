@@ -1,0 +1,8 @@
+type Mutation {
+    deleteUserLayoutsByCategory(user: String!, category: Int!): DeleteResponse
+}
+
+type DeleteResponse {
+    isAcknowledged: Boolean!
+    deletedCount: Int!
+}

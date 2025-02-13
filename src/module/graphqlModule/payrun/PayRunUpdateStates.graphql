@@ -1,0 +1,11 @@
+type Query {
+    payRunStates(payRunIds: [Long!]!): [PayRunState]
+}
+
+type PayRunState {
+    payRunId: Long
+    stateType: String
+    updated: String
+}
+
+scalar Long

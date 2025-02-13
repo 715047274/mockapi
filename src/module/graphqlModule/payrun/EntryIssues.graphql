@@ -1,0 +1,17 @@
+type Query {
+    entryIssues(
+        ctx: ServiceContextInput!,
+        filters: [FilterModelInput]
+    ): [EntryIssue]
+}
+
+type EntryIssue {
+    payRunMessageId: Long
+    payRunMessageLevelId: Int
+    payEntryBatchDataId: Long
+    payEntryBatchDataStageId: Long
+    messageTitle: String
+    messageLabel: String
+    messageParams: [String]
+}
+scalar Long

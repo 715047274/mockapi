@@ -1,0 +1,15 @@
+type Query {
+    payRunsWithProcessState(
+        ctx: ServiceContextInput!,
+        skip: Int!,
+        take: Int!,
+        filter: OverviewPayRunFilterInput!,
+        searchTerm: String!
+    ): PayRunsWithProcessStateResponse
+}
+
+type PayRunsWithProcessStateResponse {
+    items: [PayRunProcessState]
+}
+
+ 

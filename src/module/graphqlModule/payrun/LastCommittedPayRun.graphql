@@ -1,0 +1,10 @@
+type Query {
+    lastCommittedPayRun(
+        payGroupId: Int!,
+        ctx: ServiceContextInput!
+    ): PayRun
+}
+
+type PayRun {
+    payDate: String
+}

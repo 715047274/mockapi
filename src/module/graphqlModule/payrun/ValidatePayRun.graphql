@@ -1,0 +1,13 @@
+type Mutation {
+    validatePayRun(
+        payRunId: Long!
+    ): ValidatePayRunResponse
+}
+
+type ValidatePayRunResponse {
+    payRunId: Long
+    success: Boolean
+    message: CalculationMessage
+}
+
+scalar Long

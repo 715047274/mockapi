@@ -1,0 +1,11 @@
+type Mutation {
+    bulkAddUserLayouts(layouts: [CreateLayoutInput!]!): [UserLayout]
+}
+
+type UserLayout {
+    id: ID!
+    category: String
+    breakpoint: String
+    user: String
+    layout: String
+}

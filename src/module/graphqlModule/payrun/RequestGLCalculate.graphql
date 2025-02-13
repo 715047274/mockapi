@@ -1,0 +1,12 @@
+type Mutation {
+    requestGLCalculate(
+        payRunIds: [Long!]!,
+        exportDefinitionIds: [Int!]!
+    ): RequestGLCalculateResponse
+}
+
+type RequestGLCalculateResponse {
+    success: Boolean!
+}
+
+scalar Long

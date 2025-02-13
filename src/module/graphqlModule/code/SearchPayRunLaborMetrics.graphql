@@ -1,0 +1,15 @@
+type Query {
+    searchPayRunLaborMetrics(
+        ctx: ServiceContextInput!,
+        term: String,
+        payRunId: Long!,
+        employeeId: Int,
+        orgUnitId: Int,
+        maxResults: Int
+    ): [LaborMetric]
+}
+
+type LaborMetric {
+    codeId: ID!
+    displayName: String
+}

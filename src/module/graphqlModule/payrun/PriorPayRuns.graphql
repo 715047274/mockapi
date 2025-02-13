@@ -1,0 +1,19 @@
+type Query {
+    priorPayRuns(
+        payRunId: Long!,
+        ctx: ServiceContextInput!
+    ): [PriorPayRun]
+}
+
+type PriorPayRun {
+    payRunId: Long
+    shortName: String
+    periodNumberAndYear: String
+    isCurrent: Boolean
+    isOffCycle: Boolean
+    isFuture: Boolean
+    payDate: String
+}
+ 
+
+scalar Long

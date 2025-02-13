@@ -1,0 +1,3 @@
+type Mutation {
+    modifyLayout(id: String!, layout: String!): UserLayout
+}

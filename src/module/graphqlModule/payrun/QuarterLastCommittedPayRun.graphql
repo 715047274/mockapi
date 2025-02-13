@@ -1,0 +1,27 @@
+type Query {
+    quarterLastCommittedPayRun(
+        ctx: ServiceContextInput!,
+        payGroupId: Int!,
+        payDate: String!
+    ): QuarterLastCommittedPayRun
+}
+
+type QuarterLastCommittedPayRun {
+    payRunId: Long
+    payGroupId: Int
+    payPeriod: String
+    payPeriodSuffix: String
+    payPeriodDisplay: String
+    periodStart: String
+    periodEnd: String
+    effectiveDate: String
+    payDate: String
+    commitDate: String
+    payRunDefId: Int
+    isOffCyclePayRun: Boolean
+    offCyclePayRunId: Long
+    isFasterPayment: Boolean
+}
+
+
+scalar Long

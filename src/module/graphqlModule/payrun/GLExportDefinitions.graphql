@@ -1,0 +1,14 @@
+type Query {
+    glExportDefinitions(
+        ctx: ServiceContextInput,
+        payGroupId: Int!
+    ): [GLExportDefinition]
+}
+
+type GLExportDefinition {
+    dataExportDefinitionId: Long
+    shortName: String
+}
+
+ 
+scalar Long

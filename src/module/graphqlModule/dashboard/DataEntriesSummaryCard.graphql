@@ -1,0 +1,16 @@
+
+type DataEntriesSummaryResponse {
+    totalCount: Int!
+    entriesSummary: [EntrySummary]
+}
+
+type EntrySummary {
+    entryType: String
+    entryCount: Int
+    totalDeductionsAmount: Float
+    totalDeductionsDifference: Float
+    totalTaxesAmount: Float
+    totalTaxesDifference: Float
+    totalEarningsAmount: Float
+    totalEarningsDifference: Float
+}

@@ -1,0 +1,30 @@
+type Query {
+    previewPaymentItems(
+        payRunId: Long!,
+        toComparePayRunId: Long,
+        legalEntityIds: [Int!],
+        summaryItemType: Int!,
+        skip: Int!,
+        take: Int!
+    ): PreviewPaymentItemsResponse
+}
+
+type PreviewPaymentItemsResponse {
+    totalCount: Int
+    items: [PaymentItem]
+}
+
+type PaymentItem {
+    itemType: String
+    amount: Float
+    toCompareAmount: Float
+    varianceAmount: Float
+    taxServiceId: Int
+    count: Int
+    toCompareCount: Int
+    varianceCount: Int
+    legalEntityId: Int
+    currentNonPayTotal: Float
+}
+
+scalar Long

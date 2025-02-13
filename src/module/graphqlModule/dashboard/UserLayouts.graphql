@@ -1,0 +1,11 @@
+type Query {
+    userLayouts(user: String!, breakpoint: String!): [UserLayout]
+}
+
+type UserLayout {
+    id: ID!
+    category: String
+    breakpoint: String
+    user: String
+    layout: String
+}

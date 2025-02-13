@@ -1,0 +1,9 @@
+type Query {
+    paymentTotalItemsLegalCount(
+        payRunId: Long!,
+        toComparePayRunId: Long,
+        summaryDisplayTypes: [Int!]!
+    ): Int
+}
+
+scalar Long

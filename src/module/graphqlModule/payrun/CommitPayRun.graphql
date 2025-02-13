@@ -1,0 +1,13 @@
+type Mutation {
+    commitPayRun(payRunId: Long!): CommitPayRunResponse
+}
+
+type CommitPayRunResponse {
+    payRunId: Long
+    success: Boolean!
+    enableHyperscaleCommit: Boolean
+    message: CalculationMessage
+}
+
+
+scalar Long

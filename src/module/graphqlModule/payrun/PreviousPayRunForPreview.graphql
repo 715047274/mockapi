@@ -1,0 +1,21 @@
+type Query {
+    previousPayRuns(
+        ctx: ServiceContextInput!,
+        payRunId: Long!,
+        order: [OrderInput!],
+        skip: Int,
+        take: Int
+    ): PreviousPayRunsResponse
+}
+
+type PreviousPayRunsResponse {
+    totalCount: Int
+    items: [PayRun]
+}
+
+type PayRun {
+    payRunId: Long
+}
+
+
+scalar Long

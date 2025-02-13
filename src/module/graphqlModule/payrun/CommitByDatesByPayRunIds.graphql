@@ -1,0 +1,14 @@
+type Query {
+    commitByDatesByPayRunIds(
+        ctx: ServiceContextInput!,
+        payRunIds: [Long!]!
+    ): CommitByDatesResponse
+}
+
+type CommitByDatesResponse {
+    commitByTimeOfDay: String
+}
+
+ 
+
+scalar Long

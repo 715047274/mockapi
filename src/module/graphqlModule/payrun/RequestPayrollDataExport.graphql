@@ -1,0 +1,13 @@
+type Mutation {
+    requestPayrollDataExport(
+        payRunId: Long!,
+        forceGenerate: Boolean!,
+        exportConfigIds: [Int!]
+    ): RequestPayrollDataExportResponse
+}
+
+type RequestPayrollDataExportResponse {
+    success: Boolean!
+}
+
+scalar Long

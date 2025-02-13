@@ -1,0 +1,12 @@
+type Mutation {
+    calculatePayRuns(payRunIds: [Long!]!): CalculatePayRunsResponse
+}
+
+type CalculatePayRunsResponse {
+    payRunIds: [Long]
+    success: Boolean!
+    message: CalculationMessage
+}
+
+
+scalar Long

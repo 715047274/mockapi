@@ -1,0 +1,5 @@
+type Query {
+    previewReadyPayRuns(payRunIds: [Long!]!): [Long]
+}
+
+scalar Long

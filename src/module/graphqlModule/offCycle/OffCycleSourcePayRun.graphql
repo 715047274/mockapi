@@ -1,0 +1,26 @@
+type Query {
+    offCycleSourcePayRun(
+        ctx: ServiceContextInput!,
+        offCyclePayRunId: Long!
+    ): PayRunDetails
+}
+
+type PayRunDetails {
+    payRunId: Long
+    payGroupId: Long
+    payPeriod: String
+    payPeriodSuffix: String
+    payPeriodDisplay: String
+    periodStart: String
+    periodEnd: String
+    effectiveDate: String
+    payDate: String
+    commitDate: String
+    payRunDefId: Long
+    isOffCyclePayRun: Boolean
+    offCyclePayRunId: Long
+    offCyclePayRunName: String
+    isFasterPayment: Boolean
+}
+
+ 

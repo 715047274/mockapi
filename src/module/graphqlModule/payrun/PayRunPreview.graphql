@@ -1,0 +1,22 @@
+type Query {
+    previewSummary(
+        payRunId: Long!,
+        toComparePayRunId: Long,
+        legalEntityIds: [Int!]
+    ): [PreviewSummary]
+}
+
+type PreviewSummary {
+    itemType: String
+    amount: Float
+    toCompareAmount: Float
+    varianceAmount: Float
+    hours: Float
+    toCompareHours: Float
+    varianceHours: Float
+    employeeCount: Int
+    toCompareEmployeeCount: Int
+    varianceEmployeeCount: Int
+}
+
+scalar Long

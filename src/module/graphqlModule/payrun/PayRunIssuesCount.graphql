@@ -1,0 +1,15 @@
+type Query {
+    payRunIssuesCount(
+        payRunIds: [Long!]!,
+        ctx: ServiceContextInput!
+    ): [PayRunIssuesCount]
+}
+
+type PayRunIssuesCount {
+    payRunId: Long
+    messageCode: String
+    total: Int
+}
+
+
+scalar Long

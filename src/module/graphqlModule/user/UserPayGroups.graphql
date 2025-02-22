@@ -1,14 +1,14 @@
 type userPayGroups {
-    payGroupId: Int
-    geoCountryId: Int
+    payGroupId: ID
+    geoCountryId: ID
     onDemandPayEnabled: Boolean
     ipsEnabled: Boolean
     countryCode: String
-
+    shortName: String
 }
 
 type Query {
-    userPayGroups(ctx: ServiceContextInput): userPayGroups!
+    userPayGroups(ctx: ServiceContextInput, returnOnlyHyperscalePayGroups: Boolean): [userPayGroups!]
 }
 
 

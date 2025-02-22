@@ -20,31 +20,31 @@ import {scalarsResolvers} from './inputType/scalarsResolvers.js'
 import {clientPropertyResolvers} from "./clientPorpertyModule/clientPropertyResolvers.js";
 
 // graphql
-import {userResolvers} from './graphqlModule/user/UserResolvers.js'
-import {codeResolvers} from './graphqlModule/code/CodeResolvers.js'
-import {roleResolvers} from './graphqlModule/role/RoleResolvers.js'
-import {payRunResolvers} from './graphqlModule/payrun/PayRunResolvers.js'
-import {payHolidaysResolvers} from './graphqlModule/holiday/PayHolidaysResolvers.js'
-import {offCycleResolvers} from './graphqlModule/offCycle/OffCycleResolvers.js'
+// import {userResolvers} from './graphqlModule/user/UserResolvers.js'
+// import {codeResolvers} from './graphqlModule/code/CodeResolvers.js'
+// import {payRunResolvers} from './graphqlModule/payrun/PayRunResolvers.js'
+// import {payHolidaysResolvers} from './graphqlModule/holiday/PayHolidaysResolvers.js'
+// import {offCycleResolvers} from './graphqlModule/offCycle/OffCycleResolvers.js'
 
 // payrunProcess
 import {payRunProcessResolvers} from "./payRunProcessModule/payrun/PayRunProcessResolvers.js";
 
 // graphql_by_fetch
 import {pollPayRunResolvers} from "./graphql_by_fetchModule/payrun/pollPayRunResolvers.js"
-
-
+import {miscResolvers} from "../RepositoryHandler/miscResolvers.js";
+import {payRunResolvers} from "../RepositoryHandler/payRunResolvers.js"
 const resolvers = mergeResolvers([
     scalarsResolvers,
     clientPropertyResolvers,
-    userResolvers,
-    codeResolvers,
-    roleResolvers,
+   // miscResolvers,
+   //  userResolvers,
+    // codeResolvers,
+    // roleResolvers,
     payRunResolvers,
-    payHolidaysResolvers,
-    offCycleResolvers,
-    payRunProcessResolvers,
-    pollPayRunResolvers
+    // payHolidaysResolvers,
+    // offCycleResolvers,
+    // payRunProcessResolvers,
+    // pollPayRunResolvers
 ]);
 
 // Create executable schema

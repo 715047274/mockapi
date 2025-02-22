@@ -54,7 +54,7 @@ type Query {
         ctx: ServiceContextInput
         skip: Int!
         take: Int!
-        filter: OverviewPayRunFilterInput!
-        searchTerm: String!
+        filter: OverviewPayRunFilterInput
+        searchTerm: String
     ): PayRunWithProcessState!
 }

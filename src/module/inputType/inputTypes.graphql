@@ -7,13 +7,14 @@ input ServiceContextInput {
 }
 
 input OverviewPayRunFilterInput {
-    filterType: String
-    dateRangeStart: String
-    dateRangeEnd: String
-    calculationStatuses: [String]  # Already defined
+#    filterType: String
+#    dateRangeStart: String
+#    dateRangeEnd: String
+#    calculationStatuses: [String]  # Already defined
     runTypes: [String]
     payRunPeriods: [String]
     ppNs: [String]
+    payGroups: [String]
 }
 
 input CodeBaseInfoInput {

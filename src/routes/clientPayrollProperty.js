@@ -12,11 +12,11 @@ export const basePath = "/PayrollMicroFrontendStreamGateway/PayrollFrontEndBridg
 router.use(graphqlHTTP((req)=>({
     schema,
     graphiql: true,
-    rootValue: {
-        Query: {
-            clientPayrollProperties: schema.getQueryType().getFields().clientPayrollProperties.resolve
-        }
-    },
+    // rootValue: {
+    //     Query: {
+    //         clientPayrollProperties: schema.getQueryType().getFields().clientPayrollProperties.resolve
+    //     }
+    // },
     context: req.body?.variables || {}
 })));
 

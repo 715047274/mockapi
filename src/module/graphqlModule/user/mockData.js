@@ -4,21 +4,26 @@ const mockUserPayGroups = [
         geoCountryId: 1,
         onDemandPayEnabled: false,
         ipsEnabled: false,
-        countryCode: "USA"
+        countryCode: "USA",
+        shortName: 'US Corps International',
+
     },
     {
         payGroupId: 2,
         geoCountryId: 2,
         onDemandPayEnabled: true,
         ipsEnabled: false,
-        countryCode: "CAN"
+        countryCode: "CAN",
+        shortName: 'Canadian Enterprise',
+
     },
     {
         payGroupId: 3,
         geoCountryId: 3,
         onDemandPayEnabled: false,
         ipsEnabled: true,
-        countryCode: "GBR"
+        countryCode: "GBR",
+        shortName: 'US Corps Domestic',
     }
 ]
 const mockUserPreferences = [{

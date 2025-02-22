@@ -6,15 +6,6 @@ type Query {
     ): [PayRunEmployeeProcessStateCount]
 }
 
-type PayRunEmployeeProcessStateCount {
-    payRunId: Long
-    calculatedCount: CalculatedCount
-}
-
-type CalculatedCount {
-    count: Int
-    percent: Float
-}
 
  
 scalar Long

@@ -1,6 +1,6 @@
 
 type Query {
-    compositePayRunStates(payRunId: Int, payRunIds: [Int!]!): PayRunProgressResponse!
+    compositePayRunStates(payRunId: Int, payRunIds: [Long!]!): PayRunProgressResponse!
 }
 
 type PayRunProgressResponse {
@@ -19,7 +19,7 @@ type PayRunProgress {
 }
 
 type PayRunState {
-    payRunId: ID!
+    payRunId: Long!
     stateType: String!
-    updated: Int!
+    updated: String!
 }

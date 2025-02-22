@@ -1,4 +1,3 @@
-
 const mockAccessAuthorizations = [
     {
         roleAccessAuthorizationId: 9141,
@@ -121,6 +120,15 @@ const mockAccessAuthorizations = [
         canDelete: true
     }
 ]
+const mockUser = {
+    RoleId: 1001,
+    ShortName: "Client Administrator - sysrole",
+    XRefCode: "CLIENT ADMINISTRATOR Sys",
+    IsSystemRole: true,
+    IsDefault: false,
+    IsAutoSelected: false,
+    IsIpRestricted: false
+}
 
 
-export {mockAccessAuthorizations}
+export {mockUser, mockAccessAuthorizations}

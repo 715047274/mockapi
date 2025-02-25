@@ -1,5 +1,5 @@
-export const mockUserPreferences = {
-    userPreferences: [
+export const mockUserPreferences =
+    [
         {
             userPreferenceId: 115,
             preferenceName: 'EMPLOYEE_PANEL_MAXIMIZE_WINDOW',
@@ -24,8 +24,8 @@ export const mockUserPreferences = {
             preferenceValue: '10',
             isDefault: null,
         },
-    ],
-}
+    ]
+
 
 export const mockSaveUserPreference = {
     saveUserPreference: {

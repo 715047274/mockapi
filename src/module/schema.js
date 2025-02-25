@@ -33,14 +33,16 @@ import {payRunProcessResolvers} from "./payRunProcessModule/payrun/PayRunProcess
 import {pollPayRunResolvers} from "./graphql_by_fetchModule/payrun/pollPayRunResolvers.js"
 import {miscResolvers} from "../RepositoryHandler/miscResolvers.js";
 import {payRunResolvers} from "../RepositoryHandler/payRunResolvers.js"
+import {dataEntryResolvers} from "../RepositoryHandler/dataEntryResolvers.js"
 const resolvers = mergeResolvers([
     scalarsResolvers,
     clientPropertyResolvers,
-   // miscResolvers,
-   //  userResolvers,
+    miscResolvers,
+    // userResolvers,
     // codeResolvers,
     // roleResolvers,
     payRunResolvers,
+    dataEntryResolvers,
     // payHolidaysResolvers,
     // offCycleResolvers,
     // payRunProcessResolvers,

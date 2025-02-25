@@ -1,7 +1,7 @@
 type Query {
     priorPayRuns(
-        payRunId: Long!,
-        ctx: ServiceContextInput!
+        payRunId: Long,
+        ctx: ServiceContextInput
     ): [PriorPayRun]
 }
 

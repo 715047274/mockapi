@@ -3,7 +3,7 @@ type UserPreference {
     userPreferenceId: ID!
     preferenceName: String!
     preferenceValue: String!
-    isDefault: Boolean!
+    isDefault: Boolean
 }
 
 type Query {

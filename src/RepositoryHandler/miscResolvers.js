@@ -1,6 +1,6 @@
 import {getClientPayrollProperties} from "./api/clientPayrollPropertyProvider.js";
 import {mockAccessAuthorizations} from "./api/role.js";
-import {mockUserPreferences} from "./api/userPrefernces.js";
+import {mockUserPreferences} from "./api/user/userPreferences.js";
 
 const miscResolvers = {
     Query: {
